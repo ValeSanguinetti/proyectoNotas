@@ -38,5 +38,5 @@ app.use('/api',usuarioRoutes);
 app.use('/api',pdfRoutes);
 // Servidor
 app.listen(4000, () => {
-    console.log('Servidor corriendo en http://localhost:4000');
+    console.log('Servidor corriendo en https://proyectonotas-production-ac16.up.railway.app');
 });

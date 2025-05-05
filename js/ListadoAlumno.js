@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const cargarAlumnos = async () => {
         try {
-            const response = await fetch('http://localhost:4000/api/alumnos');
+            const response = await fetch('https://proyectonotas-production-ac16.up.railway.app//api/alumnos');
             const alumnos = await response.json();
             renderizarTabla(alumnos);
         } catch (error) {
@@ -56,7 +56,7 @@ botonesEditar.forEach(boton => {
                 const alumnoId = boton.dataset.id;
 
                 try {
-                    const response = await fetch('http://localhost:4000/api/rellenar-pdf', {
+                    const response = await fetch('https://proyectonotas-production-ac16.up.railway.app//api/rellenar-pdf', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -83,7 +83,7 @@ botonesEditar.forEach(boton => {
 
     const eliminarAlumno = async (id) => {
         try {
-            const response = await fetch(`http://localhost:4000/api/alumnos/${id}`, {
+            const response = await fetch(`https://proyectonotas-production-ac16.up.railway.app//api/alumnos/${id}`, {
                 method: 'DELETE',
             });
 

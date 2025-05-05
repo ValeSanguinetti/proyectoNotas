@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
             if (response.ok) {
                 alert('Escrito registrado correctamente.');
-                document.querySelectorAll('input, select').forEach(input => input.value = '');
+                window.location.href = '../Pantallas/Listado_Escritos.html';
             } else {
                 alert('Error al registrar el escrito: ' + (data.mensaje || 'Error desconocido.'));
             }

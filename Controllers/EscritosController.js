@@ -1,7 +1,8 @@
 const conexion = require('../db/conexion');
 const Escrito = require('../Models/Escritos');
 
-// Guardar un nuevo const guardarEscrito = (req, res) => {
+// Guardar un nuevo 
+const guardarEscrito = (req, res) => {
     const { nombre, fecha, nota, alumnoId } = req.body;
     const publicado = false;
     const estado = true;
@@ -42,7 +43,7 @@ const Escrito = require('../Models/Escritos');
             }
         });
     });
-
+};
 const editarEscrito = (req, res) => {
     const { id } = req.params;
     const { nombre, fecha, nota } = req.body;

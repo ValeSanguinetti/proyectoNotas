@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Alumno</title>
+    <link rel="stylesheet" href="/css/RegistrarAlumno.css">
+</head>
+<body class="listado-alumnos-body">
+    <header class="listado-alumnos-header1">Registrar Alumno</header>
+
+    <nav class="listado-alumnos-main-navigation">
+        <ul class="listado-alumnos-nav-list">
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Ventana_Inicio_Admin.html">Inicio</a></li>
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Ingresar_Nota.html"> Registrar Notas de Carné</a></li>
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Escritos.html">Escritos</a></li>
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Crear_Usuario.html">Usuarios</a></li>
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Mandar_Correo.html">Mandar Correo</a></li>
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Login.html">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+
+    <div class="listado-alumnos-content-area">
+        <div class="volver-button-container">
+            <a href="/Pantallas/Listado_De_Alumnos.html" class="listado-alumnos-primary-button button_slide">Volver</a>
+        </div>
+        <div class="registrar-alumno-register-form">
+            <div class="registrar-alumno-form-group">
+                <label for="nombreCompleto">Nombre Completo :</label>
+                <input type="text" id="nombreCompleto" name="nombreCompleto">
+            </div>
+            <div class="registrar-alumno-form-group">
+                <label for="ci">C.I. :</label>
+                <input type="text" id="ci" name="ci">
+            </div>
+
+            <div class="registrar-alumno-register-submit-container">
+                <button type="submit" class="listado-alumnos-primary-button button_slide register-submit-button">Registrar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="listado-alumnos-footer"> ( Pie de Pagina )</footer>
+
+    <script src="../js/RegistrarAlumno.js"></script>
+</body>
+</html>

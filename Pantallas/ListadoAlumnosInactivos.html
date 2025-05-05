@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Alumnos Inactivos</title>
+    <link rel="stylesheet" href="/css/AlumnosInactivos.css">
+</head>
+<body class="listado-alumnos-body">
+    <header class="listado-alumnos-header1">
+        Listado de Alumnos Inactivos
+    </header>
+
+    <nav class="listado-alumnos-main-navigation">
+        <ul class="listado-alumnos-nav-list">
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Ventana_Inicio_Admin.html">Inicio</a></li>
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Listado_De_Alumnos.html">Alumnos Activos</a></li>
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Ingresar_Nota.html">Registrar Notas de carne</a></li>
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Listado_Escritos.html">Escritos</a></li>
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Crear_Usuario.html">Usuarios</a></li>
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Mandar_Correo.html">Mandar Correo</a></li>
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Login.html">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="volver-button-container">
+            <a href="/Pantallas/Listado_De_Alumnos.html" class="volver-button button_slide slide_left">Volver</a>
+        </div>
+        <table class="tabla-alumnos">
+            <thead>
+                <tr>
+                    <th>Cédula</th>
+                    <th>Nombre Completo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-body-inactivos">
+            </tbody>
+        </table>
+    </main>
+
+    <footer class="listado-alumnos-footer">
+        ( Pie de Pagina )
+    </footer>
+
+    <script src="../js/ListadoAlumnosInactivos.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventana de Inicio Admin</title>
+    <link rel="stylesheet" href="/css/VentanaInicioAdmin.css">
+</head>
+<body class="v-inicio-admin-body">
+    <header class="v-inicio-admin-header">
+        <div class="v-inicio-admin-logo-container">
+            <img src="/images/escuela.png" alt="Logo de la Escuela">
+        </div>
+        <div class="v-inicio-admin-encabezado-container">
+            Inicio
+        </div>
+        <div class="v-inicio-admin-logo-container">
+            <img src="/images/escuela.png" alt="Logo de la Escuela">
+        </div>
+    </header>
+
+    <nav class="v-inicio-admin-menu-bar">
+        <ul>
+            <li><a href="/Pantallas/Listado_De_Alumnos.html" class="button_slide slide_left">Listado de Alumnos</a></li>
+            <li><a href="/Pantallas/Ingresar_Nota.html" class="button_slide slide_left">Registrar Notas de carne</a></li>
+            <li><a href="/Pantallas/Listado_Escritos.html" class="button_slide slide_left">Escritos</a></li>
+            <li><a href="/Pantallas/Crear_Usuario.html" class="button_slide slide_left">Usuarios</a></li>
+            <li><a href="/Pantallas/Mandar_Correo.html" class="button_slide slide_left">Mandar Wsp</a></li>
+            <li><a href="/Pantallas/Login.html" class="button_slide slide_left">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+
+    <main class="v-inicio-admin-content">
+        <div class="v-inicio-admin-contenido-adicional">
+            <section class="publicacion-notas">
+                <h2>📢 Publicación de Notas</h2>
+                <p>Selecciona un mes para publicar las notas de todos los alumnos:</p>
+                <div class="meses-notas">
+                    <a href="#" class="nota-mes" data-mes="Marzo, Abril, Mayo">📘 Marzo, Abril, Mayo</a>
+                    <a href="#" class="nota-mes" data-mes="Junio, Julio, Agosto">📙 Junio, Julio, Agosto</a>
+                    <a href="#" class="nota-mes" data-mes="Setiembre, Octubre">📗 Setiembre, Octubre</a>
+                    <a href="#" class="nota-mes" data-mes="Noviembre">📕 Noviembre</a>
+                </div>
+            </section>
+            <section class="publicacion_notas_escritos">
+                <h2>📢 Publicación de Notas de Escritos</h2>
+                <p>Selecciona un escrito para publicar las notas de todos los alumnos:</p>
+                <select id="nombreescrito" class="escrito">
+                    <option value="">Seleccione un escrito</option>
+                </select>
+            </section>
+        </div>
+    </main>
+
+    <footer class="v-inicio-admin-footer">
+    </footer>
+    <script src="../js/inicio_admin.js"></script>
+</body>
+</html>

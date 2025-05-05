@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Escritos</title>
+    <link rel="stylesheet" href="../css/Listado_escritos_alumnos.css"> 
+</head>
+<body class="listado-alumnos-body">
+    <header class="listado-alumnos-header1">
+        Listado de Escritos
+    </header>
+
+    <nav class="listado-alumnos-main-navigation">
+        <ul class="listado-alumnos-nav-list">
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Ventana_Inicio_Admin.html">Inicio</a></li>
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Ingresar_Nota.html">Registrar Notas de carne</a></li>
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Crear_Usuario.html">Usuarios</a></li>
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Mandar_Correo.html">Mandar Correo</a></li>
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Login.html">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="listado-alumnos-section-header">
+            <div class="button-container">
+                <a href="/Pantallas/Escritos.html" class="listado-alumnos-primary-button button_slide">Registrar Escrito</a>
+                <a href="/Pantallas/EscritosInactivos.html" class="inactive-button button_slide slide_left">Ver Escritos Inactivos</a>
+            </div>
+        </div>
+
+        <table class="tabla-escritos">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Fecha</th>
+                    <th>Nota</th>
+                    <th>Alumno</th>
+                    <th>Publicado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-escritos-body">
+                <!-- Filas serán cargadas desde JS -->
+            </tbody>
+        </table>
+    </main>
+
+    <footer class="listado-alumnos-footer">
+    </footer>
+
+    <script src="../js/ListadoEscritos.js"></script>
+</body>
+</html>

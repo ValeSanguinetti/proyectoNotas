@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Alumnos</title>
+    <link rel="stylesheet" href="/css/ListadoAlumnos.css">
+    
+</head>
+<body class="listado-alumnos-body">
+    <header class="listado-alumnos-header1">
+        Listado de Alumnos
+    </header>
+
+    <nav class="listado-alumnos-main-navigation">
+        <ul class="listado-alumnos-nav-list">
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Ventana_Inicio_Admin.html">Inicio</a></li>
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Ingresar_Nota.html">Registrar Notas de carne</a></li>
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Listado_Escritos.html">Escritos</a></li>
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Crear_Usuario.html">Usuarios</a></li>
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Mandar_Correo.html">Mandar Correo</a></li>
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Login.html">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="listado-alumnos-section-header">
+            <div class="button-container">
+                <a href="Registrar_Alumno.html" class="listado-alumnos-primary-button button_slide">Registrar Alumno</a>
+                <a href="/Pantallas/ListadoAlumnosInactivos.html" class="inactive-button button_slide slide_left">Ver Alumnos Inactivos</a>
+            </div>
+        </div>
+
+        <table class="tabla-alumnos">
+            <thead>
+                <tr>
+                    <th>Cédula</th>
+                    <th>Nombre Completo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-body">
+
+            </tbody>
+        </table>
+    </main>
+  
+    <footer class="listado-alumnos-footer">
+        ( Pie de Pagina )
+    </footer>
+
+    <script src="../js/ListadoAlumno.js"></script>
+</body>
+</html>

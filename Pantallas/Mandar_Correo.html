@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandar Correo</title>
+    <link rel="stylesheet" href="/css/MandarCorreo.css">
+</head>
+<body class="mandar-correo-body">
+    <header class="mandar-correo-header">
+        <div class="mandar-correo-title-container">
+            Mandar Correo
+        </div>
+    </header>
+
+    <nav class="mandar-correo-menu-bar">
+        <ul>
+            <li><a href="/Pantallas/Ventana_Inicio_Admin.html" class="button_slide slide_left mandar-correo-menu-link">Inicio</a></li>
+            <li><a href="/Pantallas/Listado_De_Alumnos.html" class="button_slide slide_left mandar-correo-menu-link">Listado de Alumnos</a></li>
+            <li><a href="/Pantallas/Ingresar_Nota.html" class="button_slide slide_left mandar-correo-menu-link">Registrar Notas de Carné</a></li>
+            <li><a href="/Pantallas/Escritos.html" class="button_slide slide_left mandar-correo-menu-link">Escritos</a></li>
+            <li><a href="/Pantallas/Crear_Usuario.html" class="button_slide slide_left mandar-correo-menu-link">Usuarios</a></li>
+            <li><a href="/Pantallas/Login.html" class="button_slide slide_left mandar-correo-menu-link">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+
+    <main class="mandar-correo-content">
+        <div class="mandar-correo-form-container">
+            <form action="#" method="post">
+                <div class="mandar-correo-form-group mandar-correo-form-group-inline">
+                    <label for="destinatario">Destinatario:</label>
+                    <input type="email" id="destinatario" name="destinatario" required>
+                </div>
+                <div class="mandar-correo-form-group mandar-correo-form-group-inline">
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" required>
+                </div>
+                <div class="mandar-correo-form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="8" required></textarea>
+                </div>
+                <div class="mandar-correo-button-container">
+                    <button type="submit" class="mandar-correo-submit-button button_slide slide_left">Enviar Correo</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="mandar-correo-footer">
+        ( Pie de Pagina )
+    </footer>
+</body>
+</html>

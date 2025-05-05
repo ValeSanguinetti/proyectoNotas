@@ -1,0 +1,241 @@
+/* Estilos generales del body */
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/* ==========================================================================
+    Estilos para Ingresar_Nota.html
+    ========================================================================== */
+    .listado-alumnos-body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .listado-alumnos-header1 {
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .listado-alumnos-main-navigation {
+        background-color: #333;
+        overflow: hidden;
+    }
+
+    .listado-alumnos-nav-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .listado-alumnos-nav-item a.listado-alumnos-nav-link {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        box-sizing: border-box;
+        border-radius: 0px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        box-shadow: inset 0 0 0 0 #ff4d4d;
+        -webkit-transition: ease-out 0.4s;
+        -moz-transition: ease-out 0.4s;
+        transition: ease-out 0.4s;
+    }
+
+    .listado-alumnos-nav-item a.listado-alumnos-nav-link:hover {
+        background-color: #575757;
+        box-shadow: inset 0 0 0 50px #ff4d4d;
+    }
+
+    .listado-alumnos-content-area {
+        padding: 20px;
+        margin-bottom: 20px; /* Reducido el margen inferior */
+    }
+
+    .registrar-alumno-register-form {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        width: 80%;
+        max-width: 600px;
+        margin: 20px auto;
+        /* Animación para el formulario */
+        opacity: 0.9;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    .registrar-alumno-register-form:hover {
+        opacity: 1;
+        transform: translateY(0);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .registrar-alumno-form-group {
+        display: flex; /* Convertir el div en un contenedor Flexbox */
+        align-items: center; /* Alinear verticalmente los elementos al centro */
+        margin-bottom: 20px;
+    }
+
+    .registrar-alumno-form-group label {
+        flex-basis: 150px; /* Ancho fijo para la etiqueta (ajusta según necesites) */
+        margin-right: 10px; /* Espacio entre la etiqueta y el input */
+        text-align: left; /* Alinear el texto de la etiqueta a la izquierda */
+        font-weight: bold;
+        color: #555;
+    }
+
+    .registrar-alumno-form-group input[type="text"],
+    .registrar-alumno-form-group select {
+        flex-grow: 1; /* El input ocupa el espacio restante */
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 1em;
+        /* Animación para los inputs y selects */
+        transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .registrar-alumno-form-group input[type="text"]:focus,
+    .registrar-alumno-form-group select:focus {
+        border-color: #ff4d4d;
+        box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
+        outline: none;
+    }
+
+    .registrar-alumno-register-submit-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .listado-alumnos-primary-button {
+        padding: 10px 15px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        box-sizing: border-box;
+        box-shadow: inset 0 0 0 0 #ff4d4d;
+        -webkit-transition: ease-out 0.4s;
+        -moz-transition: ease-out 0.4s;
+        transition: ease-out 0.4s;
+    }
+
+    .listado-alumnos-primary-button:hover {
+        background-color: #45a049;
+        box-shadow: inset 150px 0 0 0 #ff4d4d;
+    }
+
+    .listado-alumnos-footer {
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        font-size: 0.9em;
+    }
+
+    /* Espacio adicional antes del footer */
+    .footer-spacer {
+        height: 10px; /* Reducida la altura del espaciador */
+    }
+
+    @media (max-width: 768px) {
+        .listado-alumnos-header1 {
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        .listado-alumnos-nav-list {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .listado-alumnos-nav-item a.listado-alumnos-nav-link {
+            padding: 10px;
+            text-align: center;
+            display: block;
+        }
+
+        .listado-alumnos-primary-button {
+            padding: 12px;
+            font-size: 1em;
+            box-shadow: inset 100px 0 0 0 #ff4d4d;
+        }
+
+        .listado-alumnos-content-area {
+            padding: 15px;
+            margin-bottom: 15px; /* Reducido el margen inferior en pantallas pequeñas */
+        }
+
+        .listado-alumnos-footer {
+            font-size: 0.8em;
+            padding: 8px;
+        }
+
+        .registrar-alumno-register-form {
+            width: 95%;
+            margin: 15px auto;
+            padding: 20px;
+        }
+
+        .registrar-alumno-form-group {
+            flex-direction: column; /* Apilar etiqueta e input en pantallas pequeñas */
+            align-items: flex-start; /* Alinear a la izquierda */
+        }
+
+        .registrar-alumno-form-group label {
+            flex-basis: auto;
+            margin-right: 0;
+            margin-bottom: 5px; /* Espacio entre etiqueta e input apilados */
+            text-align: left;
+        }
+
+        .registrar-alumno-form-group input[type="text"],
+        .registrar-alumno-form-group select {
+            width: 100%; /* El input ocupa todo el ancho disponible */
+        }
+
+        .footer-spacer {
+            height: 5px; /* Reducida la altura del espaciador en pantallas pequeñas */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .listado-alumnos-header1 {
+            font-size: 18px;
+        }
+
+        .listado-alumnos-nav-item a.listado-alumnos-nav-link {
+            font-size: 0.9em;
+        }
+
+        .listado-alumnos-primary-button {
+            font-size: 0.95em;
+            box-shadow: inset 80px 0 0 0 #ff4d4d;
+        }
+
+        .listado-alumnos-content-area {
+            margin-bottom: 10px; /* Reducido el margen inferior en pantallas muy pequeñas */
+        }
+
+        .footer-spacer {
+            height: 2px; /* Reducida la altura del espaciador en pantallas muy pequeñas */
+        }
+    }

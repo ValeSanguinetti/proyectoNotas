@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventana de Inicio Admin</title>
+    <link rel="stylesheet" href="/css/VentanaInicioComun.css">
+</head>
+<body class="v-inicio-admin-body">
+    <header class="v-inicio-admin-header">
+        <div class="v-inicio-admin-logo-container">
+            <img src="/images/escuela.png" alt="Logo de la Escuela">
+        </div>
+        <div class="v-inicio-admin-encabezado-container">
+            Inicio
+        </div>
+        <div class="v-inicio-admin-logo-container">
+            <img src="/images/escuela.png" alt="Logo de la Escuela">
+        </div>
+    </header>
+
+    <nav class="v-inicio-admin-menu-bar">
+        <ul>
+            <li><a href="/Pantallas/Mandar_Correo_Comun.html" class="button_slide slide_left">Mandar Correo</a></li>
+            <li><a href="#" id="verCarneLink" class="button_slide slide_left">Carné</a></li>
+            
+            <li><a href="/Pantallas/Listado_Escritos_alumno.html"  class="button_slide slide_left">Escritos</a></li>
+
+            <li><a href="/Pantallas/Login.html" class="button_slide slide_left">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+
+    <main class="v-inicio-admin-content">
+        <div class="v-inicio-admin-contenido-adicional">
+            Contenido adicional ( Por ver )
+        </div>
+    </main>
+
+    <footer class="v-inicio-admin-footer">
+        ( Pie de Pagina )
+    </footer>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const alumnoId = localStorage.getItem('alumno_id');
+    const verCarneLink = document.getElementById('verCarneLink');
+
+    if (verCarneLink) {
+        verCarneLink.addEventListener('click', async () => {
+            const alumnoId = localStorage.getItem('alumno_id');
+
+                try {
+                    const response = await fetch('http://localhost:4000/api/vercarne/publicado', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ alumnoId })
+                    });
+
+                    const data = await response.json();
+                    if (response.ok) {
+                       
+                        // Redirige a la pantalla de ver-pdf.html con la URL del PDF como parámetro
+                        window.location.href = `ver_pdf.html?pdfUrl=${encodeURIComponent(data.urlPdf)}`;
+                    } else {
+                        alert(data.mensaje || 'Error al generar el carné.');
+                    }
+        
+                } catch (error) {
+                    console.error('Error al generar el carné:', error);
+                    alert('Error al generar el carné.');
+                }
+            });
+    }
+});
+
+    </script>
+</body>
+</html>

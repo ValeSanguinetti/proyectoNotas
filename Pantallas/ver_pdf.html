@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver PDF</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        iframe {
+            width: 80%;
+            height: 80%;
+        }
+
+        /* Estilo para el botón de WhatsApp */
+        #btn-whatsapp {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #25d366; /* Verde de WhatsApp */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        #btn-whatsapp:hover {
+            background-color: #128c7e;
+        }
+
+        #btn-whatsapp i {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Botón de WhatsApp 
+    <button id="btn-whatsapp">
+        <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+    </button>-->
+
+    <!-- iframe para mostrar el PDF -->
+    <iframe id="iframe-pdf" src="" type="application/pdf"></iframe>
+
+    <script>
+        // Obtenemos el parámetro `pdfUrl` de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const pdfUrl = urlParams.get('pdfUrl');
+        
+        // Si existe la URL, asignamos el src al iframe
+        if (pdfUrl) {
+            document.getElementById('iframe-pdf').src = pdfUrl;
+        } else {
+            alert('No se proporcionó una URL de PDF.');
+        }
+
+        // Función para enviar el enlace por WhatsApp
+       /* document.getElementById('btn-whatsapp').onclick = function() {
+            const mensaje = `Aquí tienes el PDF: ${pdfUrl}`;
+            const wspUrl = `https://wa.me/?text=${encodeURIComponent(mensaje)}`;
+            window.open(wspUrl, '_blank');
+        };*/
+    </script>
+
+    <!-- Agregar el script de FontAwesome para el ícono de WhatsApp -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>

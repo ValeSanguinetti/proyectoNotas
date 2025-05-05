@@ -1,0 +1,298 @@
+/* Estilos generales del body */
+body {
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+/* ==========================================================================
+  Estilos para Listado_De_Alumnos.html
+  ========================================================================== */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.listado-alumnos-body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.listado-alumnos-header1 {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.listado-alumnos-main-navigation {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.listado-alumnos-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.listado-alumnos-nav-item a.listado-alumnos-nav-link {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 0 #f44336;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+}
+
+.listado-alumnos-nav-item a.listado-alumnos-nav-link:hover {
+  background-color: #575757;
+}
+
+/* Clase específica para la animación de deslizamiento desde la izquierda */
+.listado-alumnos-nav-item a.button_slide.slide_left:hover {
+  box-shadow: inset 0 0 0 50px #f44336;
+}
+
+.listado-alumnos-content-area {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.listado-alumnos-section-header {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.listado-alumnos-section-title {
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+  align-self: flex-start;
+}
+
+.listado-alumnos-primary-button {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 0 #f44336;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+  width: auto;
+}
+
+.listado-alumnos-primary-button:hover {
+  background-color: #03853e;
+  box-shadow: inset 200px 0 0 0 #f44336;
+}
+
+main {
+  padding: 20px;
+}
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.top-bar h2 {
+  margin: 0;
+}
+.btn-registrar {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+.btn-registrar:hover {
+  background-color: #45a049;
+}
+
+.tabla-alumnos {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabla-alumnos th,
+.tabla-alumnos td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.tabla-alumnos th {
+  background-color: #f2f2f2;
+}
+
+.btn-editar {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.btn-eliminar {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.btn-vercarne{
+  background-color: rgb(0, 145, 255);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.listado-alumnos-footer {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.9em;
+}
+
+.inactive-button-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.inactive-button {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 0 #f44336;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  width: auto;
+}
+
+.inactive-button:hover {
+  background-color: #03853e;
+  box-shadow: inset 200px 0 0 0 #f44336;
+}
+
+
+@media (max-width: 768px) {
+  .listado-alumnos-header1 {
+      font-size: 20px;
+      padding: 10px;
+  }
+
+  .listado-alumnos-nav-list {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .listado-alumnos-nav-item a.listado-alumnos-nav-link {
+      padding: 10px;
+      text-align: center;
+      display: block;
+  }
+
+  .listado-alumnos-section-header {
+      flex-direction: column;
+      align-items: flex-end;
+  }
+
+  .listado-alumnos-section-title {
+      margin-bottom: 10px;
+      text-align: left;
+  }
+
+  .listado-alumnos-primary-button {
+      margin-top: 10px;
+      padding: 12px;
+      font-size: 1em;
+      box-shadow: inset 100px 0 0 0 #f44336;
+      display: block;
+      text-align: center;
+      margin-bottom: 10px;
+      width: auto;
+  }
+
+  .inactive-button {
+      margin-top: 10px;
+      padding: 12px;
+      font-size: 1em;
+      box-shadow: inset 150px 0 0 0 #f44336;
+      display: block;
+      text-align: center;
+      width: auto;
+      box-sizing: border-box;
+  }
+
+  .listado-alumnos-content-area {
+      padding: 15px;
+      align-items: flex-end;
+  }
+
+
+  .listado-alumnos-footer {
+      font-size: 0.8em;
+      padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .listado-alumnos-header1 {
+      font-size: 18px;
+  }
+
+  .listado-alumnos-nav-item a.listado-alumnos-nav-link {
+      font-size: 0.9em;
+  }
+
+  .listado-alumnos-primary-button {
+      font-size: 0.95em;
+      box-shadow: inset 80px 0 0 0 #f44336;
+  }
+
+  .inactive-button {
+      font-size: 0.95em;
+      box-shadow: inset 80px 0 0 0 #f44336;
+  }
+}

@@ -1,0 +1,95 @@
+/* Estilos generales del body */
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/* ==========================================================================
+    Estilos para Login.html
+    ========================================================================== */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('/images/Fondo_Lapices.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.login-container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.image-container {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50px; 
+    background-color: #90EE90; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; 
+    position: relative; 
+}
+
+.image-container img {
+    max-width: 70%; 
+    max-height: 70%; 
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    bottom: -20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent; 
+    border-right: 15px solid transparent; 
+    border-top: 25px solid #90EE90; 
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+@media (min-width: 768px) {
+    .login-container {
+        width: 400px;
+    }
+}

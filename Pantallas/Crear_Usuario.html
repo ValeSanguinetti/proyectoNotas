@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Nuevos Usuarios</title>
+    <link rel="stylesheet" href="/css/CrearUsuario.css">
+</head>
+<body class="crear-usuario-body">
+    <header class="crear-usuario-header">
+        <div class="crear-usuario-title-container">
+            Crear Nuevos Usuarios
+        </div>
+    </header>
+
+    <nav class="crear-usuario-menu-bar">
+        <ul>
+            <li><a href="/Pantallas/Ventana_Inicio_Admin.html" class="button_slide slide_left crear-usuario-menu-link">Inicio</a></li>
+            <li><a href="/Pantallas/Listado_De_Alumnos.html" class="button_slide slide_left crear-usuario-menu-link">Listado de Alumnos</a></li>
+            <li><a href="/Pantallas/Ingresar_Nota.html" class="button_slide slide_left crear-usuario-menu-link">Registrar Notas de Carné</a></li>
+            <li><a href="/Pantallas/Listado_Escritos.html" class="button_slide slide_left crear-usuario-menu-link">Escritos</a></li>
+            <li><a href="/Pantallas/Mandar_Correo.html" class="button_slide slide_left crear-usuario-menu-link">Mandar Correo</a></li>
+            <li><a href="/Pantallas/Login.html" class="button_slide slide_left crear-usuario-menu-link">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+
+    <main class="crear-usuario-content">
+        <div class="crear-usuario-form-container">
+            <h2>Crear Nuevo Usuario</h2>
+            <form action="#" method="post">
+                <div class="crear-usuario-form-group">
+                    <label for="nombre_completo">Nombre Completo:</label>
+                    <input type="text" id="nombre_completo" name="nombre_completo" required>
+                </div>
+                <div class="crear-usuario-form-group">
+                    <label for="ci">C.I.:</label>
+                    <input type="text" id="ci" name="ci" placeholder="9.999.999-9" required>
+                </div>
+                <div class="crear-usuario-form-group">
+                <label for="alumnoId">Alumno:</label>
+                <select id="alumnoId" name="alumnoId" required>
+                    <option value="">Seleccionar alumno</option>
+                    <!-- Las opciones serán cargadas dinámicamente con JavaScript -->
+                </select>
+            </div>
+                <div class="crear-usuario-form-group">
+                    <label for="usuario">Usuario:</label>
+                    <input type="text" id="usuario" name="usuario" required>
+                </div>
+                <div class="crear-usuario-form-group">
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" name="contrasena" required>
+                </div>
+               
+                <div class="crear-usuario-form-group">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" placeholder="Madre, Padre o Tutor" required>
+                </div>
+                <button type="submit" class="button_slide slide_left crear-usuario-submit-button">Registrar Usuario</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="crear-usuario-footer">
+        ( Pie de Pagina )
+    </footer>
+    <script src="../js/crear_usuario.js"></script>
+</body>
+</html>

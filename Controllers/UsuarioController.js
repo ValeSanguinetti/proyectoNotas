@@ -1,7 +1,7 @@
 const conexion = require('../db/conexion');
 const Usuario = require('../Models/Usuarios');
+const bcrypt = require('bcryptjs');
 
-const bcrypt = require('bcrypt');
 
 const guardarUsuario = async (req, res) => {
     const { nombreCompleto, ci, alumnoId, usuario, contrasena, correo } = req.body;

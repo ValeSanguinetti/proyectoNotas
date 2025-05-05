@@ -1,47 +1,48 @@
 const conexion = require('../db/conexion');
 const Escrito = require('../Models/Escritos');
 
-// Guardar un nuevo escrito
-const guardarEscrito = (req, res) => {
+// Guardar un nuevo const guardarEscrito = (req, res) => {
     const { nombre, fecha, nota, alumnoId } = req.body;
-    const publicado=false;
-    const estado=true;
-    const nuevoEscrito = new Escrito({
-        id: null,
-        nombre,
-        fecha,
-        nota,
-        alumnoId,
-        publicado,
-        estado
-    });
+    const publicado = false;
+    const estado = true;
 
-    const sql = `
-        INSERT INTO escritos (nombre, fecha, nota, alumno_id, publicado,estado)
-        VALUES (?, ?, ?, ?,?,?)
+    // Primero verificamos si ya existe un escrito con ese nombre para el alumno
+    const sqlCheck = `
+        SELECT * FROM escritos 
+        WHERE nombre = ? AND alumno_id = ?
     `;
 
-    const valores = [
-        nuevoEscrito.nombre,
-        nuevoEscrito.fecha,
-        nuevoEscrito.nota,
-        nuevoEscrito.alumnoId,
-        nuevoEscrito.publicado,
-        nuevoEscrito.estado
-    ];
-
-    conexion.query(sql, valores, (error, resultados) => {
+    conexion.query(sqlCheck, [nombre, alumnoId], (error, resultados) => {
         if (error) {
-            console.error('Error al guardar el escrito:', error);
-            res.status(500).json({ mensaje: 'Error al guardar el escrito' });
-        } else {
-            res.status(201).json({
-                mensaje: 'Escrito guardado correctamente',
-                id: resultados.insertId
-            });
+            console.error('Error al verificar el escrito:', error);
+            return res.status(500).json({ mensaje: 'Error al verificar el escrito' });
         }
+
+        if (resultados.length > 0) {
+            return res.status(400).json({ mensaje: 'Ya existe un escrito con ese nombre para este alumno.' });
+        }
+
+        // Si no existe, procedemos a guardar
+        const sqlInsert = `
+            INSERT INTO escritos (nombre, fecha, nota, alumno_id, publicado, estado)
+            VALUES (?, ?, ?, ?, ?, ?)
+        `;
+
+        const valores = [nombre, fecha, nota, alumnoId, publicado, estado];
+
+        conexion.query(sqlInsert, valores, (error, resultados) => {
+            if (error) {
+                console.error('Error al guardar el escrito:', error);
+                res.status(500).json({ mensaje: 'Error al guardar el escrito' });
+            } else {
+                res.status(201).json({
+                    mensaje: 'Escrito guardado correctamente',
+                    id: resultados.insertId
+                });
+            }
+        });
     });
-};
+
 const editarEscrito = (req, res) => {
     const { id } = req.params;
     const { nombre, fecha, nota } = req.body;

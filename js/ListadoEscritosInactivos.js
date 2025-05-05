@@ -1,3 +1,5 @@
+import API_BASE_URL from './config.js';
+
 document.addEventListener('DOMContentLoaded', async () => {
     // Carga los escritos inactivos al cargar la página
     await cargarEscritosInactivos();
@@ -5,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Función principal para cargar los escritos inactivos
     async function cargarEscritosInactivos() {
         try {
-            const response = await fetch('http://localhost:4000/api/escritos/inactivos');
+            const response = await fetch(`${API_BASE_URL}/api/escritos/inactivos`);
             const escritos = await response.json();
             renderizarTabla(escritos);
         } catch (error) {
@@ -54,7 +56,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Realiza la petición PUT para activar un escrito
     async function activarEscrito(id) {
         try {
-            const response = await fetch(`http://localhost:4000/api/escritos/activar/${id}`, {
+            const response = await fetch(`${API_BASE_URL}/api/escritos/activar/${id}`, {
                 method: 'PUT',
             });
 

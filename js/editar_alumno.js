@@ -1,3 +1,4 @@
+import API_BASE_URL from './config.js';
 document.addEventListener('DOMContentLoaded', async function () {
     const botonEditar = document.querySelector('.form-edit');
 
@@ -18,7 +19,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     // Cargar los datos actuales del alumno
     try {
-        const response = await fetch(`http://localhost:4000/api/alumnos/${alumnoId}`);
+        const response = await fetch(`${API_BASE_URL}/api/alumnos/${alumnoId}`);
         const alumno = await response.json();
 
         if (response.ok) {
@@ -43,7 +44,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
 
         try {
-            const response = await fetch(`http://localhost:4000/api/alumnos/editar/${alumnoId}`, {
+            const response = await fetch(`${API_BASE_URL}/api/alumnos/editar/${alumnoId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'

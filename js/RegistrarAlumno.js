@@ -1,3 +1,5 @@
+import API_BASE_URL from './config.js';
+
 document.addEventListener('DOMContentLoaded', function () {
     const botonRegistrar = document.querySelector('.register-submit-button');
 
@@ -11,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         try {
-            const response = await fetch('http://localhost:4000/api/alumnos', {
+            const response = await fetch(`${API_BASE_URL}/api/alumnos`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

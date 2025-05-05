@@ -1,3 +1,5 @@
+import API_BASE_URL from './config.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     const alumnoId = localStorage.getItem('alumno_id');
 
@@ -6,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    fetch('http://localhost:4000/api/escritos/publicados', {
+    fetch(`${API_BASE_URL}/api/escritos/publicados`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

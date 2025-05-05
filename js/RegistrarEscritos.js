@@ -1,9 +1,10 @@
+import API_BASE_URL from './config.js';
 
 document.addEventListener('DOMContentLoaded', async function () {
     const alumnoSelect = document.getElementById('alumnoId');
 
     try {
-        const response = await fetch('http://localhost:4000/api/alumnos');
+        const response = await fetch(`${API_BASE_URL}/api/alumnos`);
         const alumnos = await response.json();
 
         alumnos.forEach(alumno => {
@@ -31,7 +32,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
 
         try {
-            const response = await fetch('http://localhost:4000/api/escritos', {
+            const response = await fetch(`${API_BASE_URL}/api/escritos`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

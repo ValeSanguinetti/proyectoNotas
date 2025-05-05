@@ -1,3 +1,5 @@
+import API_BASE_URL from './config.js';
+
 document.addEventListener('DOMContentLoaded', async function () {
     const botonEditar = document.querySelector('.form-edit');
 
@@ -16,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     // Cargar datos del escrito
     try {
-        const response = await fetch(`http://localhost:4000/api/escritos/${escritoId}`);
+        const response = await fetch(`${API_BASE_URL}/api/escritos/${escritoId}`);
         const escrito = await response.json();
 
         if (response.ok) {
@@ -48,7 +50,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
 
         try {
-            const response = await fetch(`http://localhost:4000/api/escritos/editar/${escritoId}`, {
+            const response = await fetch(`${API_BASE_URL}/api/escritos/editar/${escritoId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'

@@ -1,3 +1,4 @@
+import API_BASE_URL from './config.js';
 
 document.addEventListener('DOMContentLoaded', function () {
     const botonIngresar = document.querySelector('.login-submit-button');
@@ -12,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         try {
-            const response = await fetch('http://localhost:4000/api/login', {
+            const response = await fetch(`${API_BASE_URL}/api/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

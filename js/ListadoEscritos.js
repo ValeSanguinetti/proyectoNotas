@@ -1,7 +1,9 @@
+import API_BASE_URL from './config.js';
+
 document.addEventListener('DOMContentLoaded', async () => {
     const cargarEscritos = async () => {
         try {
-            const response = await fetch('http://localhost:4000/api/escritos');
+            const response = await fetch(`${API_BASE_URL}/api/escritos`);
             const escritos = await response.json();
             renderizarTabla(escritos);
             console.log(escritos);
@@ -62,7 +64,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const eliminarEscrito = async (id) => {
         try {
-            const response = await fetch(`http://localhost:4000/api/escritos/${id}`, {
+            const response = await fetch(`${API_BASE_URL}/api/escritos/${id}`, {
                 method: 'DELETE'
             });
 

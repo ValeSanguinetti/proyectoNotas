@@ -1,6 +1,8 @@
+import API_BASE_URL from './config.js';
+
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const response = await fetch('http://localhost:4000/api/alumnos/inactivos');
+        const response = await fetch(`${API_BASE_URL}/api/alumnos/inactivos`);
         const alumnosInactivos = await response.json();
 
         const tablaBodyInactivos = document.getElementById('tabla-body-inactivos');
@@ -38,7 +40,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 // Función para activar un alumno (PUT)
 const activarAlumno = async (id) => {
     try {
-        const response = await fetch(`http://localhost:4000/api/alumnos/${id}/activar`, {
+        const response = await fetch(`${API_BASE_URL}/api/alumnos/${id}/activar`, {
             method: 'PUT',
         });
 
@@ -61,7 +63,7 @@ const activarAlumno = async (id) => {
 // Función para recargar la lista de alumnos inactivos
 const cargarAlumnosInactivos = async () => {
     try {
-        const response = await fetch('http://localhost:4000/api/alumnos/inactivos');
+        const response = await fetch(`${API_BASE_URL}/api/alumnos/inactivos`);
         const alumnosInactivos = await response.json();
 
         const tablaBodyInactivos = document.getElementById('tabla-body-inactivos');

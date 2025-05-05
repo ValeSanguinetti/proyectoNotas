@@ -1,8 +1,9 @@
+import API_BASE_URL from './config.js';
 document.addEventListener('DOMContentLoaded', function () {
     const select = document.getElementById('nombreescrito');
 
     // Cargar los nombres de escritos
-    fetch('http://localhost:4000/api/escritosnombres')
+    fetch(`${API_BASE_URL}/api/escritosnombres`)
         .then(response => response.json())
         .then(data => {
             data.forEach(escrito => {
@@ -18,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     select.addEventListener('change', function () {
         const nombreSeleccionado = this.value;
         if (nombreSeleccionado) {
-            fetch('http://localhost:4000/api/escritos/publicar', {
+            fetch(`${API_BASE_URL}/api/escritos/publicar`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -41,7 +42,7 @@ document.querySelectorAll('.nota-mes').forEach(boton => {
     boton.addEventListener('click', async () => {
         const mes = boton.dataset.mes;
         try {
-            const response = await fetch('http://localhost:4000/api/notascarne/publicar', {
+            const response = await fetch(`${API_BASE_URL}/api/notascarne/publicar`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

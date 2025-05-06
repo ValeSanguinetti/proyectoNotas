@@ -1,7 +1,7 @@
 const conexion = require('../db/conexion');
 const Escrito = require('../Models/Escritos');
-const API_BASE_URL = require('../js/config');
 
+const API_BASE_URL = 'https://proyectonotas-production-ac16.up.railway.app';
 const fs = require('fs');
 const path = require('path');
 const { PDFDocument } = require('pdf-lib');

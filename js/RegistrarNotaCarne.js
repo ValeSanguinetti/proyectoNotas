@@ -24,7 +24,9 @@ document.addEventListener('DOMContentLoaded', async function () {
 document.addEventListener('DOMContentLoaded', function () {
     const botonRegistrarNota = document.querySelector('.button-registrar');
 
-    botonRegistrarNota.addEventListener('click', async function () {
+        botonRegistrarNota.addEventListener('click', async function (event) {
+            event.preventDefault(); // 🔥 Esto evita que el formulario se envíe y recargue la página
+        
         const alumnoId = document.getElementById('alumnoId').value;
         const grado = document.getElementById('grado').value.trim();
         const messelect = document.getElementById('mes').value;

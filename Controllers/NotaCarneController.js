@@ -15,6 +15,7 @@ const guardarNotaCarne = (req, res) => {
         conceptos
     } = req.body;
 
+    console.log("Datos recibidos:", req.body); 
     const anio = new Date().getFullYear(); // Año actual
     const publicado= false;
     const nuevaNota = new NotaCarne({

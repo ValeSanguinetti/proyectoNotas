@@ -1,6 +1,6 @@
 const conexion = require('../db/conexion');
 const Escrito = require('../Models/Escritos');
-import API_BASE_URL from '../js/config';
+const API_BASE_URL = require('../js/config');
 
 const fs = require('fs');
 const path = require('path');

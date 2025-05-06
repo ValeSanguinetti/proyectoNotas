@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (response.ok) {
                 alert('Nota registrada exitosamente.');
                 // Limpiar los campos
-               document.querySelectorAll('input, textarea').forEach(input => input.value = '');
+                console.log("GUARDADO");
             } else {
                 alert('Error al registrar la nota: ' + (data.mensaje || 'Error desconocido.'));
             }

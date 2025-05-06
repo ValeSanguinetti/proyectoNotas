@@ -1,6 +1,13 @@
 const express = require('express');
 const cors = require('cors');
 const conexion = require('./db/conexion');
+// ⚠️ Captura errores no controlados desde el inicio
+process.on('uncaughtException', (err) => {
+    console.error('❌ Excepción no capturada:', err);
+});
+process.on('unhandledRejection', (reason, promise) => {
+    console.error('❌ Rechazo de promesa no manejado:', reason);
+});
 
 const alumnosRoutes = require('./Rutas/AlumnosRutas');
 const notas_carneRoutes= require('./Rutas/NotaCarneRuta');

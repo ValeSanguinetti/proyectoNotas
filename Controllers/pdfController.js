@@ -5,7 +5,6 @@ const API_BASE_URL = require('../js/config');
 const fs = require('fs');
 const path = require('path');
 const { PDFDocument } = require('pdf-lib');
-const { default: API_BASE_URL } = require('../js/config');
 
 const crearcarne= async (req, res) => {
     try {

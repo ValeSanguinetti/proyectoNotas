@@ -53,7 +53,7 @@ const guardarNotaCarne = (req, res) => {
         nuevaNota.conceptos,
         nuevaNota.publicado
     ];
-
+console.log(nuevaNota);
     conexion.query(sql, valores, (error, resultados) => {
         if (error) {
             console.error('Error al guardar la nota:', error);

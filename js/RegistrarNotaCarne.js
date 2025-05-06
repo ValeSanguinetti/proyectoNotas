@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const comprension_auditiva = document.getElementById('comprension_auditiva').value.trim();
         const tareas = document.getElementById('tareas').value.trim();
         const escritos = document.getElementById('escritos').value.trim();
-        const conceptos = document.getElementById('conceptos').value.trim();
+        const conceptos = document.getElementById('conceptos').value;
         var mes='';
         if (messelect==1){
             mes='Marzo, Abril, Mayo'

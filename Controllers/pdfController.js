@@ -35,11 +35,22 @@ const crearcarne= async (req, res) => {
         // Mapeo de mes -> trimestre
         const mapearTrimestre = (mesTexto) => {
           mesTexto = mesTexto.toLowerCase();
-          if (mesTexto.includes('marzo')) return 't1';
-          if (mesTexto.includes('junio')) return 't2';
-          if (mesTexto.includes('setiembre') || mesTexto.includes('octubre')) return 't3';
-          if (mesTexto.includes('noviebre')) return 't4';
-          return null;
+          const trimestres = [];
+        
+          if (mesTexto.includes('marzo') || mesTexto.includes('abril') || mesTexto.includes('mayo')) {
+            trimestres.push('t1');
+          }
+          if (mesTexto.includes('junio') || mesTexto.includes('julio') || mesTexto.includes('agosto')) {
+            trimestres.push('t2');
+          }
+          if (mesTexto.includes('setiembre') || mesTexto.includes('octubre')) {
+            trimestres.push('t3');
+          }
+          if (mesTexto.includes('noviembre')) {
+            trimestres.push('t4');
+          }
+        
+          return trimestres;
         };
         const datosPdf = {
           nombreCompleto: resultados[0].nombreCompleto,
@@ -124,7 +135,7 @@ const crearcarnepublicado= async (req, res) => {
         if (mesTexto.includes('marzo')) return 't1';
         if (mesTexto.includes('junio')) return 't2';
         if (mesTexto.includes('setiembre') || mesTexto.includes('octubre')) return 't3';
-        if (mesTexto.includes('noviebre')) return 't4';
+        if (mesTexto.includes('noviembre')) return 't4';
         return null;
       };
       const datosPdf = {

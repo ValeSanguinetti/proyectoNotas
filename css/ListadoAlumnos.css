@@ -6,8 +6,8 @@ body {
 }
 
 /* ==========================================================================
-  Estilos para Listado_De_Alumnos.html
-  ========================================================================== */
+Estilos para Listado_De_Alumnos.html
+========================================================================== */
 
 body {
   font-family: Arial, sans-serif;
@@ -58,7 +58,6 @@ body {
   background-color: #575757;
 }
 
-/* Clase específica para la animación de deslizamiento desde la izquierda */
 .listado-alumnos-nav-item a.button_slide.slide_left:hover {
   box-shadow: inset 0 0 0 50px #e57373;
 }
@@ -215,6 +214,56 @@ main {
   box-shadow: inset 200px 0 0 0 #e57373;
 }
 
+/* ==========================================================================
+Estilos para los mensajes de alerta del boton "Eliminar"
+========================================================================== */
+
+.ventana-emergente-eliminar {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fdecea;
+  color: #010000;
+  border: 1px solid #000000;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 1.1em;
+  width: 80%;
+  max-width: 400px;
+}
+
+.ventana-emergente-eliminar button {
+  padding: 10px 15px;
+  margin: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.ventana-emergente-eliminar .btn-confirmar-eliminar {
+  background-color: #f44336;
+  color: white;
+}
+
+.ventana-emergente-eliminar .btn-cancelar-eliminar {
+  background-color: #ccc;
+  color: black;
+}
+
+.fondo-oscuro-eliminar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
 
 @media (max-width: 768px) {
   .listado-alumnos-header1 {
@@ -275,6 +324,17 @@ main {
       font-size: 0.8em;
       padding: 8px;
   }
+
+  .ventana-emergente-eliminar {
+      font-size: 1em;
+      padding: 15px;
+  }
+
+  .ventana-emergente-eliminar button {
+      padding: 8px 12px;
+      margin: 8px;
+      font-size: 0.9em;
+  }
 }
 
 @media (max-width: 480px) {
@@ -294,5 +354,16 @@ main {
   .inactive-button {
       font-size: 0.95em;
       box-shadow: inset 80px 0 0 0 #e57373;
-  }
+    }
+
+    .ventana-emergente-eliminar {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .ventana-emergente-eliminar button {
+        padding: 6px 10px;
+        margin: 6px;
+        font-size: 0.8em;
+    }
 }

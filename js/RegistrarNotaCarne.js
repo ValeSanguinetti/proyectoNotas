@@ -251,3 +251,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 4000);
     }
 });
+
+const textarea = document.getElementById('conceptos');
+  const contador = document.getElementById('contadorConceptos');
+  const maxChars = 140;
+
+
+  textarea.addEventListener('input', function () {
+    const restante = maxChars - textarea.value.length;
+    contador.textContent = `${restante}`;
+  });

@@ -145,7 +145,7 @@ function mostrarMensajeActivacion(mensaje) {
     setTimeout(() => {
         ventanaEmergente.remove();
         fondoOscuro.remove();
-    }, 5000);
+    }, 4000);
 }
 
 // Función para recargar la lista de alumnos inactivos
@@ -162,6 +162,7 @@ async function cargarAlumnosInactivos() {
             fila.innerHTML = `
                 <td>${alumno.ci}</td>
                 <td>${alumno.nombreCompleto}</td>
+                <td>${alumno.cel}</td>
                 <td>
                     <button class="btn-activar" data-id="${alumno.id}">Activar</button>
                 </td>

@@ -219,11 +219,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function mostrarErrorCampo(campo, mensaje) {
-        campo.classList.add('error-input');
-        campo.focus();
-        setTimeout(() => campo.classList.remove('error-input'), 4000);
-    }
-
+                campo.classList.add('error-input');
+                // campo.focus(); // Eliminar esta línea
+                setTimeout(() => campo.classList.remove('error-input'), 4000);
+            }
     function mostrarMensajeError(mensaje, elementoReferencia) {
         const mensajeError = document.createElement('span');
         mensajeError.className = 'error-message';

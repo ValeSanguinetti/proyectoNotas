@@ -29,9 +29,12 @@
             </div>
             <div class="registrar-alumno-form-group">
                 <label for="ci">C.I. :</label>
-                <input type="text" id="ci" name="ci">
+                <input type="text" id="ci" name="ci" inputmode="numeric" pattern="\d*">
             </div>
-
+            <div class="registrar-alumno-form-group">
+                <label for="cel">Numero:</label>
+                <input type="text" id="cel" name="cel" inputmode="numeric" pattern="\d*">
+            </div>
             <div class="registrar-alumno-register-submit-container">
                 <button type="submit" class="listado-alumnos-primary-button button_slide register-submit-button">Registrar</button>
             </div>

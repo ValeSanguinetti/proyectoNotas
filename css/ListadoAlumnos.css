@@ -267,103 +267,103 @@ Estilos para los mensajes de alerta del boton "Eliminar"
 
 @media (max-width: 768px) {
   .listado-alumnos-header1 {
-      font-size: 20px;
-      padding: 10px;
+    font-size: 20px;
+    padding: 10px;
   }
 
   .listado-alumnos-nav-list {
-      flex-direction: column;
-      align-items: stretch;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .listado-alumnos-nav-item a.listado-alumnos-nav-link {
-      padding: 10px;
-      text-align: center;
-      display: block;
+    padding: 10px;
+    text-align: center;
+    display: block;
   }
 
   .listado-alumnos-section-header {
-      flex-direction: column;
-      align-items: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
   }
 
   .listado-alumnos-section-title {
-      margin-bottom: 10px;
-      text-align: left;
+    margin-bottom: 10px;
+    text-align: left;
   }
 
   .listado-alumnos-primary-button {
-      margin-top: 10px;
-      padding: 12px;
-      font-size: 1em;
-      box-shadow: inset 100px 0 0 0 #e57373;
-      display: block;
-      text-align: center;
-      margin-bottom: 10px;
-      width: auto;
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 1em;
+    box-shadow: inset 100px 0 0 0 #e57373;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    width: auto;
   }
 
   .inactive-button {
-      margin-top: 10px;
-      padding: 12px;
-      font-size: 1em;
-      box-shadow: inset 150px 0 0 0 #e57373;
-      display: block;
-      text-align: center;
-      width: auto;
-      box-sizing: border-box;
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 1em;
+    box-shadow: inset 150px 0 0 0 #e57373;
+    display: block;
+    text-align: center;
+    width: auto;
+    box-sizing: border-box;
   }
 
   .listado-alumnos-content-area {
-      padding: 15px;
-      align-items: flex-end;
+    padding: 15px;
+    align-items: flex-end;
   }
 
 
   .listado-alumnos-footer {
-      font-size: 0.8em;
-      padding: 8px;
+    font-size: 0.8em;
+    padding: 8px;
   }
 
   .ventana-emergente-eliminar {
-      font-size: 1em;
-      padding: 15px;
+    font-size: 1em;
+    padding: 15px;
   }
 
   .ventana-emergente-eliminar button {
-      padding: 8px 12px;
-      margin: 8px;
-      font-size: 0.9em;
+    padding: 8px 12px;
+    margin: 8px;
+    font-size: 0.9em;
   }
 }
 
 @media (max-width: 480px) {
   .listado-alumnos-header1 {
-      font-size: 18px;
+    font-size: 18px;
   }
 
   .listado-alumnos-nav-item a.listado-alumnos-nav-link {
-      font-size: 0.9em;
+    font-size: 0.9em;
   }
 
   .listado-alumnos-primary-button {
-      font-size: 0.95em;
-      box-shadow: inset 80px 0 0 0 #e57373;
+    font-size: 0.95em;
+    box-shadow: inset 80px 0 0 0 #e57373;
   }
 
   .inactive-button {
-      font-size: 0.95em;
-      box-shadow: inset 80px 0 0 0 #e57373;
-    }
+    font-size: 0.95em;
+    box-shadow: inset 80px 0 0 0 #e57373;
+  }
 
     .ventana-emergente-eliminar {
-        font-size: 0.9em;
-        padding: 10px;
+      font-size: 0.9em;
+      padding: 10px;
     }
 
     .ventana-emergente-eliminar button {
-        padding: 6px 10px;
-        margin: 6px;
-        font-size: 0.8em;
+      padding: 6px 10px;
+      margin: 6px;
+      font-size: 0.8em;
     }
 }

@@ -161,6 +161,10 @@ body {
         font-size: 0.9em;
     }
 
+    .formulario-espacio-superior {
+        min-height: 40px;
+    }
+
     @media (max-width: 768px) {
         .listado-alumnos-header1 {
             font-size: 20px;

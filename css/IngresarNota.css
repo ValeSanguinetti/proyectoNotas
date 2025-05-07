@@ -229,10 +229,11 @@ body {
     align-self: flex-end; 
 }
 
+/*
 .registrar-alumno-form-group textarea#conceptos,
 .registrar-alumno-form-group #contadorConceptos {
-    /* Se eliminarán estos estilos para evitar conflictos */
 }
+*/
 
 /* ==========================================================================
     Estilos para la ventana emergente de éxito

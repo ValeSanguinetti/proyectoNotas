@@ -3,12 +3,12 @@ const Alumno = require('../Models/Alumnos');
 
 // Función para guardar un alumno
 const guardarAlumno = (req, res) => {
-    const { ci, nombreCompleto } = req.body;
+    const { ci, nombreCompleto, cel } = req.body;
     const estado= true;
-    const nuevoAlumno = new Alumno(null, ci, nombreCompleto,estado);
+    const nuevoAlumno = new Alumno(null, ci, nombreCompleto,estado, cel);
 
-    const sql = 'INSERT INTO Alumnos (ci, nombreCompleto, estado) VALUES (?, ?, ?)';
-    conexion.query(sql, [nuevoAlumno.ci, nuevoAlumno.nombreCompleto, nuevoAlumno.estado], (error, resultados) => {
+    const sql = 'INSERT INTO Alumnos (ci, nombreCompleto, estado, cel) VALUES (?, ?, ?,?)';
+    conexion.query(sql, [nuevoAlumno.ci, nuevoAlumno.nombreCompleto, nuevoAlumno.estado, nuevoAlumno.cel], (error, resultados) => {
         if (error) {
             console.error('Error al guardar el alumno:', error);
             res.status(500).json({ mensaje: 'Error al guardar el alumno' });
@@ -83,10 +83,10 @@ const activarAlumno = (req, res) => {
 // Función para editar un alumno
 const editarAlumno = (req, res) => {
     const { id } = req.params;
-    const { ci, nombreCompleto } = req.body;
+    const { ci, nombreCompleto, cel } = req.body;
 
-    const sql = 'UPDATE Alumnos SET ci = ?, nombreCompleto = ? WHERE id = ?';
-    conexion.query(sql, [ci, nombreCompleto, id], (error, resultados) => {
+    const sql = 'UPDATE Alumnos SET ci = ?, nombreCompleto = ?, cel=? WHERE id = ?';
+    conexion.query(sql, [ci, nombreCompleto, cel, id], (error, resultados) => {
         if (error) {
             console.error('Error al editar el alumno:', error);
             res.status(500).json({ mensaje: 'Error al editar el alumno' });

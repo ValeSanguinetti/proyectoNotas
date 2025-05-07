@@ -1,46 +1,3 @@
-/*
-import API_BASE_URL from './config.js';
-
-document.addEventListener('DOMContentLoaded', function () {
-    const botonRegistrar = document.querySelector('.register-submit-button');
-
-    botonRegistrar.addEventListener('click', async function () {
-        const nombreCompleto = document.getElementById('nombreCompleto').value.trim();
-        const ci = document.getElementById('ci').value.trim();
-
-        if (!nombreCompleto || !ci) {
-            alert('Por favor completa todos los campos.');
-            return;
-        }
-
-        try {
-            const response = await fetch(`${API_BASE_URL}/api/alumnos`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    nombreCompleto: nombreCompleto,
-                    ci: ci
-                })
-            });
-
-            const data = await response.json();
-
-            if (response.ok) {
-                alert('Alumno registrado exitosamente.');
-                document.getElementById('nombreCompleto').value = '';
-                document.getElementById('ci').value = '';
-            } else {
-                alert('Error al registrar el alumno: ' + data.error);
-            }
-        } catch (error) {
-            console.error('Error al enviar los datos:', error);
-            alert('Error al conectar con el servidor.');
-        }
-    });
-});
-*/
 
 import API_BASE_URL from './config.js';
 
@@ -69,8 +26,9 @@ document.addEventListener('DOMContentLoaded', function () {
     botonRegistrar.addEventListener('click', async function () {
         const nombreCompleto = document.getElementById('nombreCompleto').value.trim();
         const ci = document.getElementById('ci').value.trim();
+        const cel= document.getElementById('cel').value.trim();
 
-        if (!nombreCompleto || !ci) {
+        if (!nombreCompleto || !ci || !cel ) {
             mostrarMensaje('error', 'Por favor completa todos los campos.');
             return;
         }
@@ -83,7 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 body: JSON.stringify({
                     nombreCompleto: nombreCompleto,
-                    ci: ci
+                    ci: ci,
+                    cel: cel
                 })
             });
 
@@ -93,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 mostrarMensaje('exito', 'Alumno registrado exitosamente.');
                 document.getElementById('nombreCompleto').value = '';
                 document.getElementById('ci').value = '';
+                document.getElementById('cel').value='';
             } else {
                 mostrarMensaje('error', 'Error al registrar el alumno: ' + (data.error || 'Error desconocido'));
             }

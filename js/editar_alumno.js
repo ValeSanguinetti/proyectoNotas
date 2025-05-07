@@ -113,6 +113,9 @@ document.addEventListener('DOMContentLoaded', async function () {
         if (response.ok) {
             document.getElementById('ci').value = alumno.ci || '';
             document.getElementById('nombreCompleto').value = alumno.nombreCompleto || '';
+            
+            document.getElementById('cel').value = alumno.cel || '';
+            
         } else {
             mostrarMensaje('error', 'No se pudieron cargar los datos del alumno.');
         }
@@ -125,8 +128,9 @@ document.addEventListener('DOMContentLoaded', async function () {
     botonEditar.addEventListener('click', async function () {
         const ci = document.getElementById('ci').value.trim();
         const nombreCompleto = document.getElementById('nombreCompleto').value.trim();
+        const cel= document.getElementById('cel').value.trim();
 
-        if (!ci || !nombreCompleto) {
+        if (!ci || !nombreCompleto || !cel) {
             mostrarMensaje('error', 'Por favor completa todos los campos.');
             return;
         }
@@ -137,7 +141,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ ci, nombreCompleto })
+                body: JSON.stringify({ ci, nombreCompleto, cel })
             });
 
             if (response.ok) {

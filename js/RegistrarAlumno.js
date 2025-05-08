@@ -238,13 +238,14 @@ document.addEventListener('DOMContentLoaded', function () {
             const data = await response.json();
 
             if (response.ok) {
-                mostrarMensaje('exito', 'Alumno registrado exitosamente.');
+                mostrarMensaje('exito', data.mensaje || 'Alumno registrado exitosamente.');
                 document.getElementById('nombreCompleto').value = '';
                 ciInput.value = '';
                 celInput.value = '';
             } else {
-                mostrarMensaje('error', 'Error al registrar el alumno: ' + (data.error || 'Error desconocido'));
+                mostrarMensaje('error', 'Error al registrar el alumno: ' + (data.mensaje || 'Error desconocido'));
             }
+            
         } catch (error) {
             console.error('Error al enviar los datos:', error);
             mostrarMensaje('error', 'Error al conectar con el servidor.');

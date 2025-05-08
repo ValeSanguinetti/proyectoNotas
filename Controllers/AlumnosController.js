@@ -49,6 +49,40 @@ const listarAlumnos = (req, res) => {
 };
 
 
+const listarGruposUnicos = (req, res) => {
+    const sql = `
+        SELECT DISTINCT grupo
+        FROM Alumnos
+        ORDER BY grupo ASC
+    `;
+
+    conexion.query(sql, (error, resultados) => {
+        if (error) {
+            console.error('Error al obtener los grupos únicos:', error);
+            res.status(500).json({ mensaje: 'Error al obtener grupos únicos' });
+        } else {
+            res.status(200).json(resultados);
+        }
+    });
+};
+const listarAlumnosPorGrupo = (req, res) => {
+    const { grupo } = req.body;
+
+    if (!grupo) {
+        return res.status(400).json({ mensaje: 'El grupo es requerido' });
+    }
+
+    const sql = 'SELECT id, ci, nombreCompleto, estado, cel, grupo FROM Alumnos WHERE grupo = ? AND estado = 1';
+    conexion.query(sql, [grupo], (error, resultados) => {
+        if (error) {
+            console.error('Error al listar alumnos por grupo:', error);
+            res.status(500).json({ mensaje: 'Error al listar alumnos por grupo' });
+        } else {
+            res.status(200).json(resultados);
+        }
+    });
+};
+
 // Función para eliminar un alumno 
 const eliminarAlumno = (req, res) => {
     const { id } = req.params; // Suponemos que el ID del alumno viene en los parámetros de la ruta
@@ -137,5 +171,7 @@ module.exports = {
     listarAlumnosInactivos,
     activarAlumno,
     editarAlumno,
-    buscarAlumnoPorId
+    buscarAlumnoPorId,
+    listarAlumnosPorGrupo,
+    listarGruposUnicos
 };

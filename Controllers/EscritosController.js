@@ -44,6 +44,31 @@ const guardarEscrito = (req, res) => {
         });
     });
 };
+const listarEscritosPorNombre = (req, res) => {
+    const { nombre } = req.body;
+
+    if (!nombre) {
+        return res.status(400).json({ mensaje: 'El nombre del escrito es requerido' });
+    }
+
+    const sql = `
+        SELECT e.*, a.nombreCompleto
+        FROM escritos e
+        INNER JOIN Alumnos a ON e.alumno_id = a.id
+        WHERE e.nombre = ? AND e.estado = 1
+        ORDER BY e.fecha DESC
+    `;
+
+    conexion.query(sql, [nombre], (error, resultados) => {
+        if (error) {
+            console.error('Error al listar los escritos por nombre:', error);
+            res.status(500).json({ mensaje: 'Error al listar los escritos por nombre' });
+        } else {
+            res.status(200).json(resultados);
+        }
+    });
+};
+
 const editarEscrito = (req, res) => {
     const { id } = req.params;
     const { nombre, fecha, nota } = req.body;
@@ -233,5 +258,6 @@ module.exports = {
     listarEscritosInactivos,
     buscarEscritoPorId,
     editarEscrito,
-    ActivarEscrito
+    ActivarEscrito,
+    listarEscritosPorNombre
 };

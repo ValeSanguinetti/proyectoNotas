@@ -17,6 +17,7 @@ router.post('/escritos/publicados',EscritosController.listarEscritosPublicadosPo
 router.delete('/escritos/:id',EscritosController.eliminarEscrito);
 router.get('/escritos/:id', EscritosController.buscarEscritoPorId);
 router.put('/escritos/editar/:id', EscritosController.editarEscrito);
+router.post('/escritos/listar-por-nombre', EscritosController.listarEscritosPorNombre);
 
 router.put('/escritos/activar/:id', EscritosController.ActivarEscrito);
 module.exports = router;

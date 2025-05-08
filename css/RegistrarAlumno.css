@@ -16,15 +16,35 @@ body {
     }
 
     .listado-alumnos-header1 {
-        background-color: #4CAF50;
+        background-color: #4682B4;
         color: white;
         padding: 15px;
         text-align: center;
         font-size: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;  
+    }
+    .v-inicio-admin-logo-container {
+        display: flex;
+        align-items: center;
+    }
+    
+    .v-inicio-admin-logo-container img {
+        max-height: 60px;
+        margin: 0 10px;
+    }
+    
+    .v-inicio-admin-encabezado-container {
+        position: absolute;           /* Lo sacamos del flujo flex */
+        left: 50%;                    /* Punto medio horizontal */
+        transform: translateX(-50%);  /* Lo desplazamos la mitad de su propio ancho */
+        text-align: center;
     }
 
     .listado-alumnos-main-navigation {
-        background-color: #333;
+        background-color: #1f2937;
         overflow: hidden;
     }
 
@@ -43,7 +63,7 @@ body {
         padding: 14px 16px;
         text-decoration: none;
         box-sizing: border-box;
-        box-shadow: inset 0 0 0 0 #ff4d4d;
+        box-shadow: inset 0 0 0 0 #e57373;
         -webkit-transition: ease-out 0.4s;
         -moz-transition: ease-out 0.4s;
         transition: ease-out 0.4s;
@@ -54,7 +74,7 @@ body {
     }
 
     .listado-alumnos-nav-item a.button_slide.slide_left:hover {
-        box-shadow: inset 0 0 0 50px #ff4d4d;
+        box-shadow: inset 0 0 0 50px #e57373;
     }
 
     .listado-alumnos-content-area {
@@ -120,7 +140,7 @@ body {
 
     .registrar-alumno-form-group input[type="text"]:focus,
     .registrar-alumno-form-group select:focus {
-        border-color: #ff4d4d;
+        border-color: #e57373;
         box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
         outline: none;
     }
@@ -132,26 +152,27 @@ body {
 
     .listado-alumnos-primary-button {
         padding: 10px 15px;
-        background-color: #4CAF50;
+        background-color: #3c8d40;
         color: white;
         border: none;
         border-radius: 4px;
         cursor: pointer;
         font-size: 16px;
         box-sizing: border-box;
-        box-shadow: inset 0 0 0 0 #ff4d4d;
+        box-shadow: inset 0 0 0 0 #e57373;
         -webkit-transition: ease-out 0.4s;
         -moz-transition: ease-out 0.4s;
         transition: ease-out 0.4s;
+        text-decoration: none;
     }
 
     .listado-alumnos-primary-button:hover {
         background-color: #45a049;
-        box-shadow: inset 150px 0 0 0 #ff4d4d;
+        box-shadow: inset 150px 0 0 0 #e57373;
     }
 
     .listado-alumnos-footer {
-        background-color: #4CAF50;
+        background-color: #4682B4;
         color: white;
         text-align: center;
         padding: 10px;
@@ -181,7 +202,7 @@ body {
         .listado-alumnos-primary-button {
             padding: 12px;
             font-size: 1em;
-            box-shadow: inset 100px 0 0 0 #ff4d4d;
+            box-shadow: inset 100px 0 0 0 #e57373;
         }
 
         .listado-alumnos-content-area {
@@ -217,7 +238,7 @@ body {
 
         .listado-alumnos-primary-button {
             font-size: 0.95em;
-            box-shadow: inset 80px 0 0 0 #ff4d4d;
+            box-shadow: inset 80px 0 0 0 #e57373;
         }
 
         .volver-button-container {

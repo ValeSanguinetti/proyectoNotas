@@ -22,15 +22,19 @@ body {
 }
 
 .listado-alumnos-header1 {
-    background-color: #4CAF50;
+    background-color: #4682B4;
     color: white;
     padding: 15px;
     text-align: center;
     font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;  
 }
 
 .listado-alumnos-main-navigation {
-    background-color: #333;
+    background-color: #1f2937;
     overflow: hidden;
 }
 
@@ -49,7 +53,7 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     box-sizing: border-box;
-    box-shadow: inset 0 0 0 0 #f44336;
+    box-shadow: inset 0 0 0 0 #e57373;
     -webkit-transition: ease-out 0.4s;
     -moz-transition: ease-out 0.4s;
     transition: ease-out 0.4s;
@@ -60,7 +64,7 @@ body {
 }
 
 .listado-alumnos-nav-item a.button_slide.slide_left:hover {
-    box-shadow: inset 0 0 0 50px #f44336; 
+    box-shadow: inset 0 0 0 50px #e57373; 
 }
 
 .listado-alumnos-content-area {
@@ -73,7 +77,22 @@ body {
     align-items: center;
     margin-bottom: 20px;
 }
+.v-inicio-admin-logo-container {
+    display: flex;
+    align-items: center;
+}
 
+.v-inicio-admin-logo-container img {
+    max-height: 60px;
+    margin: 0 10px;
+}
+
+.v-inicio-admin-encabezado-container {
+    position: absolute;           /* Lo sacamos del flujo flex */
+    left: 50%;                    /* Punto medio horizontal */
+    transform: translateX(-50%);  /* Lo desplazamos la mitad de su propio ancho */
+    text-align: center;
+}
 .listado-alumnos-section-title {
     margin: 0;
     font-size: 1.5em;
@@ -81,14 +100,14 @@ body {
 
 .listado-alumnos-primary-button {
     padding: 10px 15px;
-    background-color: #4CAF50;
+    background-color: #3c8d40;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
     box-sizing: border-box;
-    box-shadow: inset 0 0 0 0 #f44336;
+    box-shadow: inset 0 0 0 0 #e57373;
     -webkit-transition: ease-out 0.4s;
     -moz-transition: ease-out 0.4s;
     transition: ease-out 0.4s;
@@ -97,7 +116,7 @@ body {
 
 .listado-alumnos-primary-button:hover {
     background-color: #03853e;
-    box-shadow: inset 150px 0 0 0 #f44336;
+    box-shadow: inset 150px 0 0 0 #e57373;
 }
 
 main {
@@ -117,7 +136,7 @@ main {
 
 .btn-registrar {
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #3c8d40;
     color: white;
     border: none;
     border-radius: 4px;
@@ -147,33 +166,9 @@ main {
     background-color: #e5e7eb;
 }
 
-.btn-editar {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    margin-right: 5px;
-    cursor: pointer;
-}
-
-.btn-eliminar {
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-.btn-vercarne{
-    background-color: rgb(0, 145, 255);
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-}
 
 .listado-alumnos-footer {
-    background-color: #4CAF50;
+    background-color: #4682B4;
     color: white;
     text-align: center;
     padding: 10px;
@@ -184,7 +179,7 @@ main {
 }
 
 .btn-activar {
-    background-color: #4CAF50;
+    background-color: #10b981;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -199,14 +194,14 @@ main {
 
 .volver-button {
     padding: 10px 15px;
-    background-color: #4CAF50;
+    background-color: #3c8d40;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
     box-sizing: border-box;
-    box-shadow: inset 0 0 0 0 #f44336;
+    box-shadow: inset 0 0 0 0 #e57373;
     -webkit-transition: ease-out 0.4s;
     -moz-transition: ease-out 0.4s;
     transition: ease-out 0.4s;
@@ -216,7 +211,7 @@ main {
 
 .volver-button:hover {
     background-color: #03853e;
-    box-shadow: inset 150px 0 0 0 #f44336;
+    box-shadow: inset 150px 0 0 0 #e57373;
 }
 
 @media (max-width: 768px) {
@@ -245,7 +240,7 @@ main {
         margin-top: 10px;
         padding: 12px;
         font-size: 1em;
-        box-shadow: inset 100px 0 0 0 #f44336; 
+        box-shadow: inset 100px 0 0 0 #e57373; 
     }
 
     .listado-alumnos-content-area {
@@ -270,7 +265,7 @@ main {
     .volver-button {
         padding: 8px 12px;
         font-size: 1em;
-        box-shadow: inset 80px 0 0 0 #f44336;
+        box-shadow: inset 80px 0 0 0 #e57373;
     }
 }
 
@@ -285,7 +280,7 @@ main {
 
     .listado-alumnos-primary-button {
         font-size: 0.95em;
-        box-shadow: inset 80px 0 0 0 #f44336;
+        box-shadow: inset 80px 0 0 0 #e57373;
     }
 
     .volver-button-container {
@@ -294,7 +289,7 @@ main {
 
     .volver-button {
         font-size: 0.9em;
-        box-shadow: inset 60px 0 0 0 #f44336;
+        box-shadow: inset 60px 0 0 0 #e57373;
     }
 }
 
@@ -309,7 +304,7 @@ main {
     transform: translate(-50%, -50%);
     background-color: #e6ffe6; 
     color: #333; 
-    border: 1px solid #4CAF50; 
+    border: 1px solid #4682B4; 
     padding: 20px;
     border-radius: 4px; 
     z-index: 1000;

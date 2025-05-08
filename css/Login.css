@@ -46,9 +46,9 @@ body {
 }
 
 .image-container img {
-    max-width: 70%; 
+    max-width: 95%; 
     max-height: 70%; 
-    border-radius: 50%; 
+    border-radius: 30%; 
     object-fit: cover; 
 }
 
@@ -77,7 +77,7 @@ input[type="password"] {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: #3c8d40;
     color: white;
     border: none;
     border-radius: 4px;

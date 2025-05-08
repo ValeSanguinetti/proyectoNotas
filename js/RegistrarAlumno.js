@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const contenedorMensajes = document.querySelector('.registrar-alumno-register-form');
     const ciInput = document.getElementById('ci');
     const celInput = document.getElementById('cel');
-
+    const grupoInput= document.getElementById('grupo');
     function mostrarMensaje(tipo, mensaje) {
         const mensajeDiv = document.createElement('div');
         mensajeDiv.className = `mensaje-${tipo}`;
@@ -201,8 +201,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const nombreCompleto = document.getElementById('nombreCompleto').value.trim();
         const ci = ciInput.value.trim();
         const cel = celInput.value.trim();
+        const grupo =grupoInput.value.trim();
 
-        if (!nombreCompleto || !ci || !cel) {
+        if (!nombreCompleto || !ci || !cel || !grupo) {
             mostrarMensaje('error', 'Por favor completa todos los campos.');
             return;
         }
@@ -231,7 +232,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 body: JSON.stringify({
                     nombreCompleto: nombreCompleto,
                     ci: ci,
-                    cel: cel
+                    cel: cel,
+                    grupo: grupo
                 })
             });
 
@@ -242,6 +244,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById('nombreCompleto').value = '';
                 ciInput.value = '';
                 celInput.value = '';
+                grupoInput.value='';
             } else {
                 mostrarMensaje('error', 'Error al registrar el alumno: ' + (data.mensaje || 'Error desconocido'));
             }

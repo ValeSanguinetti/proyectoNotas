@@ -117,8 +117,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const contenedorMensajes = document.createElement('div'); // Crear un contenedor para los mensajes
     contenedorMensajes.className = 'contenedor-mensajes';  // Asignar una clase para estilos
 
-    // Insertar el contenedor después del botón de registrar
-    botonRegistrarNota.parentNode.insertBefore(contenedorMensajes, botonRegistrarNota.nextSibling);
+    // Insertar el contenedor después del formulario
+    formulario.parentNode.insertBefore(contenedorMensajes, formulario.nextSibling);
 
     botonRegistrarNota.addEventListener('click', async function (event) {
         event.preventDefault();
@@ -219,10 +219,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function mostrarErrorCampo(campo, mensaje) {
-                campo.classList.add('error-input');
-                // campo.focus(); // Eliminar esta línea
-                setTimeout(() => campo.classList.remove('error-input'), 4000);
-            }
+        campo.classList.add('error-input');
+        // campo.focus(); // Eliminar esta línea
+        setTimeout(() => campo.classList.remove('error-input'), 4000);
+    }
+
     function mostrarMensajeError(mensaje, elementoReferencia) {
         const mensajeError = document.createElement('span');
         mensajeError.className = 'error-message';
@@ -252,11 +253,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 const textarea = document.getElementById('conceptos');
-  const contador = document.getElementById('contadorConceptos');
-  const maxChars = 140;
+const contador = document.getElementById('contadorConceptos');
+const maxChars = 140;
 
 
-  textarea.addEventListener('input', function () {
+textarea.addEventListener('input', function () {
     const restante = maxChars - textarea.value.length;
     contador.textContent = `${restante}`;
-  });
+});

@@ -3,35 +3,37 @@ body {
     font-family: sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-  }
-  
-  /* ==========================================================================
+}
+
+/* ==========================================================================
     Estilos para Listado_De_Alumnos.html
     ========================================================================== */
-  
-  body {
+
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-  }
-  .listado-alumnos-body {
+}
+
+.listado-alumnos-body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-  }
-  
-  .listado-alumnos-header1 {
+}
+
+.listado-alumnos-header1 {
     background-color: #4682B4;
-        color: white;
-        padding: 15px;
-        text-align: center;
-        font-size: 24px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;  
-  }
-  .v-inicio-admin-logo-container {
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.v-inicio-admin-logo-container {
     display: flex;
     align-items: center;
 }
@@ -42,25 +44,26 @@ body {
 }
 
 .v-inicio-admin-encabezado-container {
-    position: absolute;           /* Lo sacamos del flujo flex */
-    left: 50%;                    /* Punto medio horizontal */
-    transform: translateX(-50%);  /* Lo desplazamos la mitad de su propio ancho */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
 }
-  .listado-alumnos-main-navigation {
+
+.listado-alumnos-main-navigation {
     background-color: #1f2937;
     overflow: hidden;
-  }
-  
-  .listado-alumnos-nav-list {
+}
+
+.listado-alumnos-nav-list {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: space-around;
-  }
-  
-  .listado-alumnos-nav-item a.listado-alumnos-nav-link {
+}
+
+.listado-alumnos-nav-item a.listado-alumnos-nav-link {
     display: block;
     color: white;
     text-align: center;
@@ -71,52 +74,50 @@ body {
     -webkit-transition: ease-out 0.4s;
     -moz-transition: ease-out 0.4s;
     transition: ease-out 0.4s;
-  }
-  
-  .listado-alumnos-nav-item a.listado-alumnos-nav-link:hover {
+}
+
+.listado-alumnos-nav-item a.listado-alumnos-nav-link:hover {
     background-color: #575757;
-  }
-  
-  /* Clase específica para la animación de deslizamiento desde la izquierda */
-  .listado-alumnos-nav-item a.button_slide.slide_left:hover {
+}
+
+.listado-alumnos-nav-item a.button_slide.slide_left:hover {
     box-shadow: inset 0 0 0 50px #e57373;
-  }
-  
-  .listado-alumnos-content-area {
+}
+
+.listado-alumnos-content-area {
     padding: 20px;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
     align-items: flex-end;
-  }
-  
+}
+
 .listado-alumnos-section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
 }
 
 .header-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .header-left select {
-  padding: 5px;
-  font-size: 14px;
+    padding: 5px;
+    font-size: 14px;
 }
 
-  
-  .listado-alumnos-section-title {
+.listado-alumnos-section-title {
     margin: 0 0 10px 0;
     font-size: 1.5em;
     align-self: flex-start;
-  }
-  
-  .listado-alumnos-primary-button {
+}
+
+.listado-alumnos-primary-button {
     padding: 10px 15px;
     background-color: #3c8d40;
     color: white;
@@ -134,66 +135,72 @@ body {
     display: block;
     text-align: center;
     width: auto;
-  }
-  
-  .listado-alumnos-primary-button:hover {
+}
+
+.listado-alumnos-primary-button:hover {
     background-color: #03853e;
     box-shadow: inset 200px 0 0 0 #e57373;
-  }
-  
-  main {
+}
+
+main {
     padding: 20px;
-  }
-  .top-bar {
+}
+
+.top-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-  }
-  .top-bar h2 {
+}
+
+.top-bar h2 {
     margin: 0;
-  }
-  .tabla-escritos {
+}
+
+.tabla-escritos {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-  }
-  
-  .tabla-escritos th,
-  .tabla-escritos td {
+}
+
+.tabla-escritos th,
+.tabla-escritos td {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: left;
-  }
-  
-  .tabla-escritos th {
+}
+
+.tabla-escritos th {
     background-color: #e5e7eb;
-  }
-  .btn-editar {
+}
+
+.btn-editar {
     background-color: #10b981;
     color: white;
     border: none;
     padding: 5px 10px;
     margin-right: 5px;
     cursor: pointer;
-  }
-  
-  .btn-eliminar {
+}
+
+.btn-eliminar {
     background-color: #e57373;
     ;
     color: white;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
-  }
-  .btn-vercarne{
+}
+
+.btn-vercarne {
     background-color: rgb(0, 145, 255);
     color: white;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
-  }
-  .listado-alumnos-footer {
+}
+
+.listado-alumnos-footer {
     background-color: #4682B4;
     color: white;
     text-align: center;
@@ -202,14 +209,14 @@ body {
     bottom: 0;
     width: 100%;
     font-size: 0.9em;
-  }
-  
-  .inactive-button-container {
+}
+
+.inactive-button-container {
     margin-top: 20px;
     text-align: center;
-  }
-  
-  .inactive-button {
+}
+
+.inactive-button {
     padding: 10px 15px;
     background-color: #3c8d40;
     color: white;
@@ -226,14 +233,14 @@ body {
     display: block;
     text-align: center;
     width: auto;
-  }
-  
-  .inactive-button:hover {
+}
+
+.inactive-button:hover {
     background-color: #03853e;
     box-shadow: inset 200px 0 0 0 #e57373;
-  }
-  
-  .listado-alumnos-footer {
+}
+
+.listado-alumnos-footer {
     background-color: #4682B4;
     color: white;
     text-align: center;
@@ -242,35 +249,36 @@ body {
     bottom: 0;
     width: 100%;
     font-size: 0.9em;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
+
     .listado-alumnos-header1 {
         font-size: 20px;
         padding: 10px;
     }
-  
+
     .listado-alumnos-nav-list {
         flex-direction: column;
         align-items: stretch;
     }
-  
+
     .listado-alumnos-nav-item a.listado-alumnos-nav-link {
         padding: 10px;
         text-align: center;
         display: block;
     }
-  
+
     .listado-alumnos-section-header {
         flex-direction: column;
         align-items: flex-end;
     }
-  
+
     .listado-alumnos-section-title {
         margin-bottom: 10px;
         text-align: left;
     }
-  
+
     .listado-alumnos-primary-button {
         margin-top: 10px;
         padding: 12px;
@@ -281,7 +289,7 @@ body {
         margin-bottom: 10px;
         width: auto;
     }
-  
+
     .inactive-button {
         margin-top: 10px;
         padding: 12px;
@@ -292,35 +300,173 @@ body {
         width: auto;
         box-sizing: border-box;
     }
-  
+
     .listado-alumnos-content-area {
         padding: 15px;
         align-items: flex-end;
     }
-  
-  
+
+
     .listado-alumnos-footer {
         font-size: 0.8em;
         padding: 8px;
     }
-  }
-  
-  @media (max-width: 480px) {
+
+    .ventana-emergente-eliminar {
+        font-size: 1em;
+        padding: 15px;
+    }
+
+    .ventana-emergente-eliminar button {
+        padding: 8px 12px;
+        margin: 8px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+
     .listado-alumnos-header1 {
         font-size: 18px;
     }
-  
+
     .listado-alumnos-nav-item a.listado-alumnos-nav-link {
         font-size: 0.9em;
     }
-  
+
     .listado-alumnos-primary-button {
         font-size: 0.95em;
         box-shadow: inset 80px 0 0 0 #e57373;
     }
-  
+
     .inactive-button {
         font-size: 0.95em;
         box-shadow: inset 80px 0 0 0 #e57373;
     }
-  }
+
+    .ventana-emergente-eliminar {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .ventana-emergente-eliminar button {
+        padding: 6px 10px;
+        margin: 6px;
+        font-size: 0.8em;
+    }
+}
+
+/* ==========================================================================
+Estilos para los mensajes de alerta del boton "Eliminar"
+========================================================================== */
+
+.ventana-emergente-eliminar {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fdecea;
+    color: #010000;
+    border: 1px solid #000000;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 1.1em;
+    width: 80%;
+    max-width: 400px;
+}
+
+.ventana-emergente-eliminar button {
+    padding: 10px 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.ventana-emergente-eliminar .btn-confirmar-eliminar {
+    background-color: #f44336;
+    color: white;
+}
+
+.ventana-emergente-eliminar .btn-cancelar-eliminar {
+    background-color: #ccc;
+    color: black;
+}
+
+.fondo-oscuro-eliminar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.fondo-oscuro-activar { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 998; 
+}
+
+.ventana-emergente-activar { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #e6ffe6;
+    color: #333;
+    border: 1px solid #4682B4; 
+    padding: 20px;
+    border-radius: 4px;
+    z-index: 999; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    text-align: center;
+    font-size: 1em;
+    width: 80%;
+    max-width: 400px; 
+}
+
+@media (max-width: 768px) {
+    .ventana-emergente-activar {
+        font-size: 0.9em;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ventana-emergente-activar {
+        font-size: 0.85em;
+        padding: 10px;
+    }
+}
+
+/* Estilos para el contenedor de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #58c7d6;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.search-container label {
+    margin-right: 5px;
+}
+
+.search-container select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+

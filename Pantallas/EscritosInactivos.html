@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listado de Escritos</title>
-    <link rel="stylesheet" href="../css/EscritosInactivos.css"> 
+    <link rel="stylesheet" href="../css/EscritosInactivos.css">
 </head>
 <body class="listado-alumnos-body">
     <header class="listado-alumnos-header1">
@@ -19,12 +19,16 @@
     <nav class="listado-alumnos-main-navigation">
         <ul class="listado-alumnos-nav-list">
             <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Ventana_Inicio_Admin.html">Inicio</a></li>
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Listado_De_Alumnos.html">Listado de Alumnos</a></li>
             <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Ingresar_Nota.html">Registrar Notas de carne</a></li>
             <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Login.html">Cerrar sesión</a></li>
         </ul>
     </nav>
 
     <main>
+        <div class="volver-button-container">
+            <a href="/Pantallas/Listado_Escritos.html" class="volver-button button_slide slide_left">Volver</a>
+        </div>
         <div class="listado-alumnos-section-header">
             <div class="button-container">
             </div>
@@ -42,8 +46,7 @@
                 </tr>
             </thead>
             <tbody id="tabla-escritos-body">
-                <!-- Filas serán cargadas desde JS -->
-            </tbody>
+                </tbody>
         </table>
     </main>
 

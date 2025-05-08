@@ -30,7 +30,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;  
+    position: relative;
 }
 .v-inicio-admin-logo-container {
     display: flex;
@@ -43,9 +43,9 @@ body {
 }
 
 .v-inicio-admin-encabezado-container {
-    position: absolute;           /* Lo sacamos del flujo flex */
-    left: 50%;                    /* Punto medio horizontal */
-    transform: translateX(-50%);  /* Lo desplazamos la mitad de su propio ancho */
+    position: absolute;           
+    left: 50%;                    
+    transform: translateX(-50%);  
     text-align: center;
 }
 .listado-alumnos-main-navigation {
@@ -75,12 +75,11 @@ body {
 }
 
 .listado-alumnos-nav-item a.listado-alumnos-nav-link:hover {
-    background-color: #575757; /* Mantiene el cambio de fondo gris al hacer hover */
+    background-color: #575757; 
 }
 
-/* Clase específica para la animación de deslizamiento desde la izquierda */
 .listado-alumnos-nav-item a.button_slide.slide_left:hover {
-    box-shadow: inset 0 0 0 50px #e57373; /* Ancho del deslizamiento del color rojo */
+    box-shadow: inset 0 0 0 50px #e57373; 
 }
 
 .listado-alumnos-content-area {
@@ -190,7 +189,7 @@ main {
     -moz-transition: ease-out 0.4s;
     transition: ease-out 0.4s;
     text-decoration: none;
-    display: inline-block; /* Para que no ocupe todo el ancho */
+    display: inline-block; 
 }
 
 .volver-button:hover {
@@ -212,7 +211,7 @@ main {
     .listado-alumnos-nav-item a.listado-alumnos-nav-link {
         padding: 10px;
         text-align: center;
-        display: block; /* Asegura que ocupe todo el ancho */
+        display: block; 
     }
 
     .listado-alumnos-section-header {
@@ -224,7 +223,7 @@ main {
         margin-top: 10px;
         padding: 12px;
         font-size: 1em;
-        box-shadow: inset 100px 0 0 0 #e57373; /* Ajusta el ancho para pantallas pequeñas */
+        box-shadow: inset 100px 0 0 0 #e57373; 
     }
 
     .listado-alumnos-content-area {
@@ -275,4 +274,70 @@ main {
         font-size: 0.9em;
         box-shadow: inset 60px 0 0 0 #e57373;
     }
+}
+
+/* ==========================================================================
+    Estilos para la ventana emergente de activación
+    ========================================================================== */
+
+.ventana-emergente-activar {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #e6ffe6;
+    color: #333;
+    border: 1px solid #4682B4;
+    padding: 20px;
+    border-radius: 4px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 1em;
+    width: 80%;
+    max-width: 400px;
+}
+
+.ventana-emergente-activar p {
+    margin-bottom: 15px;
+}
+
+.fondo-oscuro-activar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+    .ventana-emergente-activar {
+        font-size: 0.9em;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ventana-emergente-activar {
+        font-size: 0.85em;
+        padding: 10px;
+    }
+}
+
+.mensaje-activado {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #e6ffe6; 
+    color: #008000; 
+    border: 1px solid #90ee90; 
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 1.1em;
 }

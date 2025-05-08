@@ -132,21 +132,36 @@ const conexion = require('../db/conexion');
 const Alumno = require('../Models/Alumnos');
 
 // Función para guardar un alumno
-const guardarAlumno = (req, res) => {
+const guardarAlumno = (req, res) => { 
     const { ci, nombreCompleto, cel } = req.body;
-    const estado= true;
-    const nuevoAlumno = new Alumno(null, ci, nombreCompleto,estado, cel);
+    const estado = true;
 
-    const sql = 'INSERT INTO Alumnos (ci, nombreCompleto, estado, cel) VALUES (?, ?, ?,?)';
-    conexion.query(sql, [nuevoAlumno.ci, nuevoAlumno.nombreCompleto, nuevoAlumno.estado, nuevoAlumno.cel], (error, resultados) => {
-        if (error) {
-            console.error('Error al guardar el alumno:', error);
-            res.status(500).json({ mensaje: 'Error al guardar el alumno' });
-        } else {
-            res.status(201).json({ mensaje: 'Alumno guardado correctamente', id: resultados.insertId });
+    // Verificar si la CI ya está registrada
+    const checkSql = 'SELECT * FROM Alumnos WHERE ci = ?';
+    conexion.query(checkSql, [ci], (err, resultados) => {
+        if (err) {
+            console.error('Error al verificar la CI:', err);
+            return res.status(500).json({ mensaje: 'Error al verificar la CI' });
         }
+
+        if (resultados.length > 0) {
+            return res.status(400).json({ mensaje: 'La CI ya está registrada' });
+        }
+
+        // Si no existe, guardar el nuevo alumno
+        const nuevoAlumno = new Alumno(null, ci, nombreCompleto, estado, cel);
+        const insertSql = 'INSERT INTO Alumnos (ci, nombreCompleto, estado, cel) VALUES (?, ?, ?, ?)';
+        conexion.query(insertSql, [nuevoAlumno.ci, nuevoAlumno.nombreCompleto, nuevoAlumno.estado, nuevoAlumno.cel], (error, resultados) => {
+            if (error) {
+                console.error('Error al guardar el alumno:', error);
+                res.status(500).json({ mensaje: 'Error al guardar el alumno' });
+            } else {
+                res.status(201).json({ mensaje: 'Alumno guardado correctamente', id: resultados.insertId });
+            }
+        });
     });
 };
+
 // Agregamos listarAlumnos al mismo archivo
 
 // Función para listar todos los alumnos

@@ -21,7 +21,8 @@ router.get('/alumnos/inactivos',Alumnocontroller.listarAlumnosInactivos);
 // Ruta para activar un alumno por su ID
 router.put('/alumnos/:id/activar',Alumnocontroller.activarAlumno);
 router.put('/alumnos/editar/:id',Alumnocontroller.editarAlumno);
-
+router.post('/alumnos/Listar-por-grupo', Alumnocontroller.listarAlumnosPorGrupo);
+router.get('/gruposunicos',Alumnocontroller.listarGruposUnicos);
 router.get('/alumnos/:id', Alumnocontroller.buscarAlumnoPorId);
 module.exports = router;
 

@@ -26,8 +26,27 @@ body {
   padding: 15px;
   text-align: center;
   font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.v-inicio-admin-logo-container {
+  display: flex;
+  align-items: center;
 }
 
+.v-inicio-admin-logo-container img {
+  max-height: 60px;
+  margin: 0 10px;
+}
+
+.v-inicio-admin-encabezado-container {
+  position: absolute; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  text-align: center;
+}
 .listado-alumnos-main-navigation {
   background-color: #1f2937;
   overflow: hidden;
@@ -71,11 +90,43 @@ body {
 }
 
 .listado-alumnos-section-header {
-  margin-bottom: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  gap: 20px;
 }
+
+.header-left {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #58c7d6; 
+  border-radius: 10px;       
+  margin-right: 20px;        
+}
+
+.header-left label {
+  margin-right: 5px;       
+}
+
+.header-left select {
+  padding: 8px;             
+  font-size: 14px;          
+  border: 1px solid #ccc;   
+  border-radius: 5px;       
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 8px 5px;
+  cursor: pointer;
+}
+
+.header-left select:focus {
+  outline: none;
+  border-color: #007bff; 
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); 
+}
+
 
 .listado-alumnos-section-title {
   margin: 0 0 10px 0;
@@ -319,7 +370,6 @@ Estilos para los mensajes de alerta del boton "Eliminar"
     align-items: flex-end;
   }
 
-
   .listado-alumnos-footer {
     font-size: 0.8em;
     padding: 8px;
@@ -356,14 +406,14 @@ Estilos para los mensajes de alerta del boton "Eliminar"
     box-shadow: inset 80px 0 0 0 #e57373;
   }
 
-    .ventana-emergente-eliminar {
-      font-size: 0.9em;
-      padding: 10px;
-    }
+  .ventana-emergente-eliminar {
+    font-size: 0.9em;
+    padding: 10px;
+  }
 
-    .ventana-emergente-eliminar button {
-      padding: 6px 10px;
-      margin: 6px;
-      font-size: 0.8em;
-    }
+  .ventana-emergente-eliminar button {
+    padding: 6px 10px;
+    margin: 6px;
+    font-size: 0.8em;
+  }
 }

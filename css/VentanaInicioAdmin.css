@@ -129,9 +129,61 @@ body::before {
     filter: brightness(0.6);
     /* oscurece el fondo */
     z-index: -1;
-    /* lo pone detrás del contenido */
+    
 }
 
+@media (max-width: 768px) {
+    .v-inicio-admin-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .v-inicio-admin-logo-container {
+        margin: 10px 0;
+    }
+    
+    .v-inicio-admin-menu-bar ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .v-inicio-admin-contenido-adicional h2 {
+        font-size: 50px;
+        color: #1aecec;
+        margin-bottom: 10px;
+    }
+    
+    .v-inicio-admin-contenido-adicional p {
+        font-size: 20px;
+        color: white;
+        max-width: 600px;
+    }
+    
+
+    .v-inicio-admin-menu-bar li a {
+        text-align: center;
+        padding: 10px;
+        display: block;
+    }
+
+    .v-inicio-admin-encabezado-container {
+        margin: 10px 0;
+    }
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/fondo2.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.6); 
+    z-index: -1; 
+}
 @media (max-width: 768px) {
     .v-inicio-admin-header {
         flex-direction: column;
@@ -150,8 +202,7 @@ body::before {
     .v-inicio-admin-menu-bar li a {
         text-align: center;
         padding: 10px;
-        display: block;
-        /* Asegura que ocupe todo el ancho del li */
+        display: block; /* Asegura que ocupe todo el ancho del li */
     }
 
     .v-inicio-admin-encabezado-container {

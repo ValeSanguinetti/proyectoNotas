@@ -9,7 +9,12 @@
 </head>
 <body class="listado-alumnos-body">
     <header class="listado-alumnos-header1">
+        <div class="v-inicio-admin-logo-container">
+            <img src="/images/logo.png" alt="Logo de la Escuela">
+        </div>
+        <div class="v-inicio-admin-encabezado-container">
         Listado de Alumnos
+        </div>
     </header>
 
     <nav class="listado-alumnos-main-navigation">
@@ -23,6 +28,13 @@
 
     <main>
         <div class="listado-alumnos-section-header">
+            <div class="header-left">
+                <label for="alumnos">Buscar alumnos por grupo:</label>
+                <select id="alumnos" name="alumnos">
+                    <option value="">Seleccionar un grupo</option>
+                    <!-- Opciones dinámicas -->
+                </select>
+            </div>
             <div class="button-container">
                 <a href="Registrar_Alumno.html" class="listado-alumnos-primary-button button_slide">Registrar Alumno</a>
                 <a href="/Pantallas/ListadoAlumnosInactivos.html" class="inactive-button button_slide slide_left">Ver Alumnos Inactivos</a>
@@ -35,6 +47,7 @@
                     <th>Cédula</th>
                     <th>Nombre Completo</th>
                     <th>Celular</th>
+                    <th>Grupo</th>
                     <th>Acciones</th>
                 </tr>
             </thead>

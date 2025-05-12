@@ -221,8 +221,9 @@ main {
 
 /* Estilos específicos para el botón "Eliminar Definitivamente" en la tabla */
 .btn-eliminar-definitivo {
-  background-color: #ffc107; /* Amarillo */
-  color: #212529; /* Texto oscuro para mejor contraste */
+  background-color: #ffc107;
+  background-color: #ffc107; 
+  color: #212529; 
   border: none;
   padding: 5px 10px;
   cursor: pointer;
@@ -231,7 +232,7 @@ main {
 }
 
 .btn-eliminar-definitivo:hover {
-  background-color: #e0a800; /* Amarillo un poco más oscuro al pasar el ratón */
+  background-color: #e0a800; 
 }
 
 .btn-vercarne {
@@ -445,7 +446,7 @@ Estilos para los mensajes de alerta del boton "Eliminar"
 }
 
 .button-container {
-  display: flex; /* Alinea los elementos hijos en fila */
-  gap: 10px;     /* Espacio entre los botones */
-  justify-content: flex-end; /* ¡NUEVO! Alinea los botones a la derecha dentro de su contenedor */
+  display: flex;
+  gap: 10px;     
+  justify-content: flex-end;
 }

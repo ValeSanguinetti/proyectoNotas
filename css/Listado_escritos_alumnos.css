@@ -470,3 +470,9 @@ Estilos para los mensajes de alerta del boton "Eliminar"
     border-radius: 5px;
 }
 
+
+.button-container {
+    display: flex;
+    gap: 10px;     
+    justify-content: flex-end;
+}

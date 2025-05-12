@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         body.appendChild(fondoOscuro);
         body.appendChild(ventanaEmergente);
 
-        const botonConfirmarDefinitivo = ventanaEmergente.querySelector('.btn-confirmar-eliminar');
+        const botonConfirmarDefinitivo = ventanaEmergente.querySelector('.btn-confirmar-eliminar-definitivo');
         const botonCancelar = ventanaEmergente.querySelector('.btn-cancelar-eliminar');
 
         botonConfirmarDefinitivo.addEventListener('click', async () => {
@@ -157,6 +157,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 } else {
                     await cargarEscritos();
                 }
+                mostrarMensajeEliminado();
             } else {
                 const data = await response.json();
                 alert(data.mensaje || 'No se pudo eliminar el escrito.');

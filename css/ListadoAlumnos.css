@@ -42,9 +42,9 @@ body {
 }
 
 .v-inicio-admin-encabezado-container {
-  position: absolute; 
-  left: 50%; 
-  transform: translateX(-50%); 
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
 }
 .listado-alumnos-main-navigation {
@@ -101,20 +101,20 @@ body {
   display: flex;
   align-items: center;
   padding: 10px;
-  background-color: #58c7d6; 
-  border-radius: 10px;       
-  margin-right: 20px;        
+  background-color: #58c7d6;
+  border-radius: 10px;
+  margin-right: 20px;
 }
 
 .header-left label {
-  margin-right: 5px;       
+  margin-right: 5px;
 }
 
 .header-left select {
-  padding: 8px;             
-  font-size: 14px;          
-  border: 1px solid #ccc;   
-  border-radius: 5px;       
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 8px 5px;
@@ -123,8 +123,8 @@ body {
 
 .header-left select:focus {
   outline: none;
-  border-color: #007bff; 
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); 
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 
@@ -136,7 +136,7 @@ body {
 
 .listado-alumnos-primary-button {
   padding: 10px 15px;
-  background-color: #3c8d40 ;
+  background-color: #3c8d40;
   color: white;
   border: none;
   border-radius: 4px;
@@ -148,8 +148,8 @@ body {
   -moz-transition: ease-out 0.4s;
   transition: ease-out 0.4s;
   text-decoration: none;
-  margin-bottom: 10px;
-  display: block;
+  margin-bottom: 0; /* ¡CAMBIADO! */
+  display: inline-block; /* ¡CAMBIADO! */
   text-align: center;
   width: auto;
 }
@@ -218,7 +218,23 @@ main {
   padding: 5px 10px;
   cursor: pointer;
 }
-.btn-vercarne{
+
+/* Estilos específicos para el botón "Eliminar Definitivamente" en la tabla */
+.btn-eliminar-definitivo {
+  background-color: #ffc107; /* Amarillo */
+  color: #212529; /* Texto oscuro para mejor contraste */
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.btn-eliminar-definitivo:hover {
+  background-color: #e0a800; /* Amarillo un poco más oscuro al pasar el ratón */
+}
+
+.btn-vercarne {
   background-color: #3b82f6;
   color: white;
   border: none;
@@ -243,7 +259,7 @@ main {
 
 .inactive-button {
   padding: 10px 15px;
-  background-color: #3c8d40 ;
+  background-color: #3c8d40;
   color: white;
   border: none;
   border-radius: 4px;
@@ -255,7 +271,8 @@ main {
   -moz-transition: ease-out 0.4s;
   transition: ease-out 0.4s;
   text-decoration: none;
-  display: block;
+  margin-bottom: 0; /* ¡CAMBIADO! */
+  display: inline-block; /* ¡CAMBIADO! */
   text-align: center;
   width: auto;
 }
@@ -304,6 +321,15 @@ Estilos para los mensajes de alerta del boton "Eliminar"
 .ventana-emergente-eliminar .btn-cancelar-eliminar {
   background-color: #ccc;
   color: black;
+}
+
+.ventana-emergente-eliminar .btn-confirmar-eliminar-definitivo {
+    background-color: #ff0000; /* Mantenemos el rojo para la confirmación */
+    color: white;
+}
+
+.ventana-emergente-eliminar .btn-confirmar-eliminar-definitivo:hover {
+    background-color: #cc0000;
 }
 
 .fondo-oscuro-eliminar {
@@ -416,4 +442,10 @@ Estilos para los mensajes de alerta del boton "Eliminar"
     margin: 6px;
     font-size: 0.8em;
   }
+}
+
+.button-container {
+  display: flex; /* Alinea los elementos hijos en fila */
+  gap: 10px;     /* Espacio entre los botones */
+  justify-content: flex-end; /* ¡NUEVO! Alinea los botones a la derecha dentro de su contenedor */
 }

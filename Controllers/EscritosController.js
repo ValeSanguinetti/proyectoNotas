@@ -44,6 +44,23 @@ const guardarEscrito = (req, res) => {
         });
     });
 };
+const eliminarEscritoDefinitivamente = (req, res) => {
+    const { id } = req.params;
+
+    const sql = 'DELETE FROM escritos WHERE id = ?';
+
+    conexion.query(sql, [id], (error, resultados) => {
+        if (error) {
+            console.error('Error al eliminar definitivamente el escrito:', error);
+            res.status(500).json({ mensaje: 'Error al eliminar el escrito' });
+        } else if (resultados.affectedRows === 0) {
+            res.status(404).json({ mensaje: 'No se encontró ningún escrito con ese ID' });
+        } else {
+            res.status(200).json({ mensaje: 'Escrito eliminado permanentemente' });
+        }
+    });
+};
+
 const listarEscritosPorNombre = (req, res) => {
     const { nombre } = req.body;
 
@@ -259,5 +276,6 @@ module.exports = {
     buscarEscritoPorId,
     editarEscrito,
     ActivarEscrito,
-    listarEscritosPorNombre
+    listarEscritosPorNombre,
+    eliminarEscritoDefinitivamente
 };

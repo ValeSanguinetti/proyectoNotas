@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <td>
                     <button class="btn-editar" data-id="${alumno.id}">Editar</button>
                     <button class="btn-eliminar" data-id="${alumno.id}">Eliminar</button>
-                    <button class="btn-vercarne" data-id="${alumno.id}">Ver Carne</button>
+                    <button class="btn-vercarne" data-id="${alumno.id}">Ver Carné</button>
                     <button class="btn-eliminar-definitivo" data-id="${alumno.id}">Eliminar Definitivamente</button>
                 </td>
             `;

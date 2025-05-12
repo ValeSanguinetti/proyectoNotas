@@ -210,6 +210,14 @@ main {
     cursor: pointer;
 }
 
+.btn-editar,
+.btn-eliminar,
+.btn-eliminar-definitivo,
+.ventana-emergente-eliminar button { 
+    font-family: Arial, sans-serif; 
+    font-size: 1em; 
+}
+
 .listado-alumnos-footer {
     background-color: #4682B4;
     color: white;
@@ -459,7 +467,9 @@ Estilos para los mensajes de alerta del boton "Eliminar"
     }
 }
 
-/* Estilos para el contenedor de búsqueda */
+/* ==========================================================================
+Estilos para el contenedor de busqueda
+========================================================================== */
 .search-container {
     display: flex;
     align-items: center;
@@ -487,18 +497,30 @@ Estilos para los mensajes de alerta del boton "Eliminar"
     justify-content: flex-end;
 }
 
-/* Estilos para el botón "Eliminar definitivamente" */
+/* ==========================================================================
+Estilos para el boton "Eliminar definitivamente"
+========================================================================== */
 .btn-eliminar-definitivo {
     background-color: #ffc107;
-    color: #212529;
+    color: #fcfcfc;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 4px;
     font-size: 1em;
-    transition: background-color 0.3s ease; /* Agregamos la transición */
+    transition: background-color 0.3s ease; 
 }
 
 .btn-eliminar-definitivo:hover {
-    background-color: #e0a800; /* Oscurecemos un poco al hacer hover */
+    background-color: #e0a800; 
+}
+
+.ventana-emergente-eliminar .btn-confirmar-eliminar-definitivo {
+    background-color: #dc3545; 
+    color: white; 
+    border: none; 
+}
+
+.ventana-emergente-eliminar .btn-confirmar-eliminar-definitivo:hover {
+    background-color: #c82333; 
 }

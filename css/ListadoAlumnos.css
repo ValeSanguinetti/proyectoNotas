@@ -209,11 +209,11 @@ main {
   padding: 5px 10px;
   margin-right: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Agregamos una transición suave */
+  transition: background-color 0.3s ease; 
 }
 
 .btn-editar:hover {
-  background-color: #0b875e; /* Un tono más oscuro al hacer hover */
+  background-color: #0b875e; 
 }
 
 .btn-eliminar {
@@ -222,27 +222,26 @@ main {
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Agregamos una transición suave */
+  transition: background-color 0.3s ease; 
 }
 
 .btn-eliminar:hover {
-  background-color: #d32f2f; /* Un tono más oscuro al hacer hover */
+  background-color: #d32f2f; 
 }
 
-/* Estilos específicos para el botón "Eliminar Definitivamente" en la tabla */
 .btn-eliminar-definitivo {
   background-color: #ffc107;
-  color: #212529;
+  color: #fafafa;
   border: none;
   padding: 5px 10px;
   cursor: pointer;
   border-radius: 4px;
   font-size: 1em;
-  transition: background-color 0.3s ease; /* Ya tenía transición, la dejamos */
+  transition: background-color 0.3s ease;
 }
 
 .btn-eliminar-definitivo:hover {
-  background-color: #e0a800; /* Ya tenía hover, lo dejamos */
+  background-color: #e0a800; 
 }
 
 .btn-vercarne {
@@ -251,12 +250,22 @@ main {
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Agregamos una transición suave */
+  transition: background-color 0.3s ease; 
 }
 
 .btn-vercarne:hover {
-  background-color: #2563eb; /* Un tono más oscuro al hacer hover */
+  background-color: #2563eb;
 }
+
+.btn-editar,
+.btn-eliminar,
+.btn-vercarne,
+.btn-eliminar-definitivo {
+    font-family: Arial, sans-serif; 
+    font-size: 1em; 
+    padding: 5px 10px; 
+}
+
 .listado-alumnos-footer {
   background-color: #4682B4;
   color: white;
@@ -287,8 +296,8 @@ main {
   -moz-transition: ease-out 0.4s;
   transition: ease-out 0.4s;
   text-decoration: none;
-  margin-bottom: 0; /* ¡CAMBIADO! */
-  display: inline-block; /* ¡CAMBIADO! */
+  margin-bottom: 0; 
+  display: inline-block; 
   text-align: center;
   width: auto;
 }
@@ -340,7 +349,7 @@ Estilos para los mensajes de alerta del boton "Eliminar"
 }
 
 .ventana-emergente-eliminar .btn-confirmar-eliminar-definitivo {
-    background-color: #ff0000; /* Mantenemos el rojo para la confirmación */
+    background-color: #ff0000; 
     color: white;
 }
 

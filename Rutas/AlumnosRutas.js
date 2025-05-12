@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const  Alumnocontroller  = require('../Controllers/AlumnosController');
-
+ 
 
 // Ruta para guardar alumno
 router.post('/alumnos',Alumnocontroller.guardarAlumno);
@@ -24,5 +24,7 @@ router.put('/alumnos/editar/:id',Alumnocontroller.editarAlumno);
 router.post('/alumnos/Listar-por-grupo', Alumnocontroller.listarAlumnosPorGrupo);
 router.get('/gruposunicos',Alumnocontroller.listarGruposUnicos);
 router.get('/alumnos/:id', Alumnocontroller.buscarAlumnoPorId);
+router.delete('/alumnos/eliminar-definitivo/:id', alumnosController.eliminarAlumnoDefinitivamente);
+
 module.exports = router;
 

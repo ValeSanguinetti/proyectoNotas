@@ -162,7 +162,44 @@ const buscarAlumnoPorId = (req, res) => {
             res.status(200).json(resultados[0]);
         }
     });
+};const eliminarAlumnoDefinitivamente = (req, res) => {
+    const { id } = req.params;
+
+    // Paso 1: Eliminar registros relacionados en la tabla Escritos
+    const eliminarEscritos = 'DELETE FROM escritos WHERE alumno_id = ?';
+
+    conexion.query(eliminarEscritos, [id], (errorEscritos) => {
+        if (errorEscritos) {
+            console.error('Error al eliminar los escritos del alumno:', errorEscritos);
+            return res.status(500).json({ mensaje: 'Error al eliminar los escritos del alumno' });
+        }
+
+        // Paso 2: Eliminar registros relacionados en la tabla NotasCarne
+        const eliminarNotas = 'DELETE FROM notas_carne WHERE alumno_id = ?';
+
+        conexion.query(eliminarNotas, [id], (errorNotas) => {
+            if (errorNotas) {
+                console.error('Error al eliminar las notas del alumno:', errorNotas);
+                return res.status(500).json({ mensaje: 'Error al eliminar las notas del alumno' });
+            }
+
+            // Paso 3: Eliminar el alumno
+            const eliminarAlumno = 'DELETE FROM Alumnos WHERE id = ?';
+
+            conexion.query(eliminarAlumno, [id], (errorAlumno, resultadosAlumno) => {
+                if (errorAlumno) {
+                    console.error('Error al eliminar definitivamente el alumno:', errorAlumno);
+                    return res.status(500).json({ mensaje: 'Error al eliminar definitivamente el alumno' });
+                } else if (resultadosAlumno.affectedRows === 0) {
+                    return res.status(404).json({ mensaje: 'No se encontró ningún alumno con ese ID' });
+                } else {
+                    return res.status(200).json({ mensaje: 'Alumno y todos sus registros relacionados eliminados permanentemente' });
+                }
+            });
+        });
+    });
 };
+
 
 module.exports = {
     eliminarAlumno,
@@ -173,5 +210,6 @@ module.exports = {
     editarAlumno,
     buscarAlumnoPorId,
     listarAlumnosPorGrupo,
-    listarGruposUnicos
+    listarGruposUnicos,
+    eliminarAlumnoDefinitivamente
 };

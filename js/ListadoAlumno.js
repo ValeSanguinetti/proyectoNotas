@@ -393,8 +393,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             fondoOscuro.remove();
         });
     };
-
-    // NUEVO: Función para eliminar al alumno de forma definitiva
     const eliminarAlumnoDefinitivo = async (id) => {
         try {
             const response = await fetch(`${API_BASE_URL}/api/alumnos/eliminar-definitivo/${id}`, { // Ajusta la ruta de tu API

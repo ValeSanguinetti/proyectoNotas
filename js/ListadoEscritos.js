@@ -75,6 +75,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                 window.location.href = `editar_escrito.html?id=${id}`;
             });
         });
+        document.querySelectorAll('.btn-eliminar-definitivo').forEach(boton => {
+            boton.addEventListener('click', () => {
+                const id = boton.dataset.id;
+                mostrarVentanaEliminarDefinitivo(id);
+            });
+        });
     };
 
     const mostrarVentanaEliminar = (id) => {
@@ -107,7 +113,59 @@ document.addEventListener('DOMContentLoaded', async () => {
             fondoOscuro.remove();
         });
     };
+    const mostrarVentanaEliminarDefinitivo = (id) => {
+        const body = document.body;
+        const fondoOscuro = document.createElement('div');
+        fondoOscuro.className = 'fondo-oscuro-eliminar'; // Reutilizamos el fondo oscuro
 
+        const ventanaEmergente = document.createElement('div');
+        ventanaEmergente.className = 'ventana-emergente-eliminar'; // Reutilizamos la ventana emergente
+        ventanaEmergente.innerHTML = `
+            <p>¡PELIGRO! ¿Estás SEGURO de que quieres ELIMINAR DEFINITIVAMENTE a este escrito?</p>
+            <p>Esta acción es IRREVERSIBLE y borrará todos sus datos.</p>
+            <button class="btn-confirmar-eliminar-definitivo">Eliminar Definitivamente</button>
+            <button class="btn-cancelar-eliminar">Cancelar</button>
+        `;
+
+        body.appendChild(fondoOscuro);
+        body.appendChild(ventanaEmergente);
+
+        const botonConfirmarDefinitivo = ventanaEmergente.querySelector('.btn-confirmar-eliminar');
+        const botonCancelar = ventanaEmergente.querySelector('.btn-cancelar-eliminar');
+
+        botonConfirmarDefinitivo.addEventListener('click', async () => {
+            await eliminarEscritoDefinitivo(id); // Llama a la función de eliminación definitiva
+            ventanaEmergente.remove();
+            fondoOscuro.remove();
+        });
+
+        botonCancelar.addEventListener('click', () => {
+            ventanaEmergente.remove();
+            fondoOscuro.remove();
+        });
+    };
+
+    const eliminarEscritoDefinitivo = async (id) => {
+        try {
+            const response = await fetch(`${API_BASE_URL}/api/eliminar-definitivo/${id}`, { // Ajusta la ruta de tu API
+                method: 'DELETE',
+            });
+            if (response.ok) {
+                const nombreSeleccionado = escritoselect.value;
+                if (nombreSeleccionado) {
+                    await cargarEscritosPorNombre(nombreSeleccionado);
+                } else {
+                    await cargarEscritos();
+                }
+            } else {
+                const data = await response.json();
+                alert(data.mensaje || 'No se pudo eliminar el escrito.');
+            }
+        } catch (error) {
+            console.error('Error de red al eliminar definitivamente el escrito:', error);
+            alert('Error de red al intentar eliminar definitivamente el escrito.');
+        }
+    };
     const mostrarMensajeEliminado = () => {
         const fondoOscuro = document.createElement('div');
         fondoOscuro.className = 'fondo-oscuro-activar'; 

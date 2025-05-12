@@ -39,7 +39,7 @@ body {
     margin: 0 10px;
 }
 
-.escritos-titulo-container {
+.v-inicio-admin-encabezado-container {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -96,11 +96,8 @@ body {
     transform: translateY(-5px);
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     position: relative;
-    padding-top: 10px;
-}
-
-.formulario-espacio-superior {
-    min-height: 70px;
+    /* Ajustamos el padding-top para dar espacio a los mensajes */
+    padding-top: 65px;
 }
 
 .form-group {
@@ -155,6 +152,29 @@ body {
     box-shadow: inset 0 0 0 50px #e57373;
 }
 
+.styled-select {
+    width: 100%;
+    max-width: 437px;
+    padding: 8px 12px;
+    font-size: 16px;
+    line-height: 1.4;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%227%22%20viewBox%3D%220%200%2010%207%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%200l5%207%205-7z%22%20fill%3D%22%23666%22/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 10px 7px;
+    cursor: pointer;
+}
+
+.styled-select:focus {
+    outline: none;
+    border-color: #72acef;
+    box-shadow: 0 0 0 2px rgba(114, 172, 239, 0.4);
+}
+
 .escritos-footer {
     background-color: #4682B4;
     color: white;
@@ -181,6 +201,8 @@ body {
         width: 95%;
         margin: 20px auto;
         padding: 20px;
+        /* Ajustamos el padding-top para pantallas pequeñas */
+        padding-top: 50px;
     }
 
     .form-group {

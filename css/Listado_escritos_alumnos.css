@@ -181,6 +181,11 @@ main {
     padding: 5px 10px;
     margin-right: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Agregamos la transición */
+}
+
+.btn-editar:hover {
+    background-color: #0b875e; /* Oscurecemos un poco al hacer hover */
 }
 
 .btn-eliminar {
@@ -190,6 +195,11 @@ main {
     border: none;
     padding: 5px 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Ya tiene transición */
+}
+
+.btn-eliminar:hover {
+    background-color: #d32f2f; /* Ya tiene hover */
 }
 
 .btn-vercarne {
@@ -407,32 +417,32 @@ Estilos para los mensajes de alerta del boton "Eliminar"
     z-index: 999;
 }
 
-.fondo-oscuro-activar { 
+.fondo-oscuro-activar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 998; 
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
 }
 
-.ventana-emergente-activar { 
+.ventana-emergente-activar {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #e6ffe6;
     color: #333;
-    border: 1px solid #4682B4; 
+    border: 1px solid #4682B4;
     padding: 20px;
     border-radius: 4px;
-    z-index: 999; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     font-size: 1em;
     width: 80%;
-    max-width: 400px; 
+    max-width: 400px;
 }
 
 @media (max-width: 768px) {
@@ -473,6 +483,22 @@ Estilos para los mensajes de alerta del boton "Eliminar"
 
 .button-container {
     display: flex;
-    gap: 10px;     
+    gap: 10px;
     justify-content: flex-end;
+}
+
+/* Estilos para el botón "Eliminar definitivamente" */
+.btn-eliminar-definitivo {
+    background-color: #ffc107;
+    color: #212529;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: background-color 0.3s ease; /* Agregamos la transición */
+}
+
+.btn-eliminar-definitivo:hover {
+    background-color: #e0a800; /* Oscurecemos un poco al hacer hover */
 }

@@ -307,6 +307,63 @@ body {
     text-align: center; /* Centrar los mensajes dentro del contenedor */
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+}
+.close-menu-button {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+.close-menu-item {
+    display: none;
+  }
+  
+/* Menú oculto en mobile */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .close-menu-item {
+        display: block;
+      }
+    
+    .close-menu-button {
+        display: block;
+    }
+    .listado-alumnos-nav-list {
+        display: none;
+        flex-direction: column;
+        background-color: #1f2937;
+        padding: 0;
+        margin: 0;
+        position: absolute; /* Necesario para que z-index funcione */
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 1100; 
+    }
+
+    .listado-alumnos-nav-item {
+        border-top: 1px solid #1f2937;
+        text-align: center;
+        padding: 12px 0;
+    }
+
+    .listado-alumnos-nav-list.active {
+        display: flex;
+    }
+}
 
 @media (max-width: 768px) {
     .listado-alumnos-header1 {
@@ -345,6 +402,9 @@ body {
         width: 95%;
         margin: 15px auto;
         padding: 20px;
+        z-index: 900;
+        position: relative;
+
     }
 
     .registrar-alumno-form-group {

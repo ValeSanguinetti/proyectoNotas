@@ -1,6 +1,33 @@
 import API_BASE_URL from './config.js';
 
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const navList = document.getElementById("nav-list");
+    const closeMenu = document.getElementById("close-menu");
+
+    menuToggle.addEventListener("click", () => {
+        navList.style.display = navList.style.display === "block" ? "none" : "block";
+    });
+
+    closeMenu.addEventListener("click", () => {
+        navList.style.display = "none";
+    });
+});
+
 document.addEventListener('DOMContentLoaded', async function () {
+        // Menú hamburguesa
+       
+        // Contador de caracteres
+        const textarea = document.getElementById('conceptos');
+        const contador = document.getElementById('contadorConceptos');
+        const maxChars = 140;
+        if (textarea && contador) {
+            textarea.addEventListener('input', function () {
+                const restante = maxChars - textarea.value.length;
+                contador.textContent = `${restante}`;
+            });
+        }
+    
     const alumnoSelect = document.getElementById('alumnoId');
 
     try {
@@ -158,14 +185,4 @@ document.addEventListener('DOMContentLoaded', function () {
             fondoOscuro.remove();
         }, 4000);
     }
-});
-
-const textarea = document.getElementById('conceptos');
-const contador = document.getElementById('contadorConceptos');
-const maxChars = 140;
-
-
-textarea.addEventListener('input', function () {
-    const restante = maxChars - textarea.value.length;
-    contador.textContent = `${restante}`;
 });

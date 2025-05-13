@@ -24,22 +24,22 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: relative;  
+        position: relative;
     }
     .v-inicio-admin-logo-container {
         display: flex;
         align-items: center;
     }
-    
+
     .v-inicio-admin-logo-container img {
         max-height: 60px;
         margin: 0 10px;
     }
-    
+
     .v-inicio-admin-encabezado-container {
-        position: absolute;           /* Lo sacamos del flujo flex */
-        left: 50%;                    /* Punto medio horizontal */
-        transform: translateX(-50%);  /* Lo desplazamos la mitad de su propio ancho */
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
         text-align: center;
     }
     .listado-alumnos-main-navigation {
@@ -100,8 +100,8 @@ body {
         opacity: 0.9;
         transform: translateY(-10px);
         transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-        padding-top: 20px; /* Espacio para los mensajes */
-        position: relative; /* Para posicionar los mensajes dentro */
+        padding-top: 20px;
+        position: relative;
     }
 
     .registrar-alumno-register-form:hover {
@@ -115,7 +115,7 @@ body {
     }
 
     .registrar-alumno-form-group:first-child {
-        margin-top: 30px; /* Más espacio arriba del Nombre Completo */
+        margin-top: 30px;
     }
 
     .registrar-alumno-form-group label {
@@ -162,6 +162,7 @@ body {
         -webkit-transition: ease-out 0.4s;
         -moz-transition: ease-out 0.4s;
         transition: ease-out 0.4s;
+        text-decoration: none; /* Elimina el subrayado */
     }
 
     .listado-alumnos-primary-button:hover {
@@ -183,7 +184,7 @@ body {
     .formulario-espacio-superior {
         min-height: 40px;
     }
-   
+
     @media (max-width: 768px) {
         .listado-alumnos-header1 {
             font-size: 20px;

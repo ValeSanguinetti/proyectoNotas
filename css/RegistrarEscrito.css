@@ -77,6 +77,34 @@ body {
     box-shadow: inset 0 0 0 50px #e57373;
 }
 
+.volver-button-container {
+    position: absolute;
+    top: 24vh; 
+    left: 20px;
+}
+
+.listado-alumnos-primary-button {
+    padding: 10px 15px;
+    background-color: #3c8d40;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 0 #e57373;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+    text-decoration: none; 
+    display: inline-block; 
+}
+
+.listado-alumnos-primary-button:hover {
+    background-color: #059669;
+    box-shadow: inset 150px 0 0 0 #e57373;
+}
+
 .escritos-content {
     padding: 20px;
     flex-grow: 1;
@@ -184,47 +212,7 @@ body {
     width: 100%;
 }
 
-/* Estilos Responsive */
-@media (max-width: 768px) {
-    .escritos-menu-bar ul {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .escritos-menu-bar li a {
-        text-align: center;
-        padding: 10px;
-        display: block;
-    }
-
-    .escritos-form-container {
-        width: 95%;
-        margin: 20px auto;
-        padding: 20px;
-        /* Ajustamos el padding-top para pantallas pequeñas */
-        padding-top: 50px;
-    }
-
-    .form-group {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .form-group label {
-        width: 100%;
-        margin-bottom: 5px;
-        margin-right: 0;
-        text-align: left;
-    }
-
-    .form-group input[type="text"],
-    .form-group input[type="date"],
-    .form-group input[type="number"] {
-        width: 100%;
-    }
-}
-
-/* Estilos generales para mensajes */
+/* Estilos generales para mensajes (si los usas en esta página) */
 .mensaje-error {
     background-color: #fdecea;
     color: #d9230f;
@@ -273,8 +261,45 @@ body {
     z-index: 10;
 }
 
-/* Estilos responsivos para los mensajes */
+/* Estilos Responsive para pantallas de hasta 768px */
 @media (max-width: 768px) {
+    .escritos-menu-bar ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .escritos-menu-bar li a {
+        text-align: center;
+        padding: 10px;
+        display: block;
+    }
+
+    .escritos-form-container {
+        width: 95%;
+        margin: 20px auto;
+        padding: 20px;
+        /* Ajustamos el padding-top para pantallas pequeñas */
+        padding-top: 50px;
+    }
+
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-group label {
+        width: 100%;
+        margin-bottom: 5px;
+        margin-right: 0;
+        text-align: left;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="date"],
+    .form-group input[type="number"] {
+        width: 100%;
+    }
+
     .mensaje-error,
     .mensaje-alerta,
     .mensaje-exito {
@@ -288,8 +313,21 @@ body {
     .formulario-espacio-superior {
         min-height: 35px;
     }
+
+    .listado-alumnos-primary-button {
+        padding: 12px;
+        font-size: 1em;
+        box-shadow: inset 100px 0 0 0 #e57373;
+    }
+
+
+    .volver-button-container {
+        top: 55px;
+        left: 15px;
+    }
 }
 
+/* Estilos Responsive para pantallas de hasta 480px */
 @media (max-width: 480px) {
     .mensaje-error,
     .mensaje-alerta,
@@ -302,5 +340,15 @@ body {
 
     .formulario-espacio-superior {
         min-height: 30px;
+    }
+
+    .listado-alumnos-primary-button {
+        font-size: 0.95em;
+        box-shadow: inset 80px 0 0 0 #e57373;
+    }
+
+    .volver-button-container {
+        top: 50px;
+        left: 10px;
     }
 }

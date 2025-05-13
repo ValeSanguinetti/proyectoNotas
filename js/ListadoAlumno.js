@@ -395,26 +395,46 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
     
     const eliminarAlumnoDefinitivo = async (id) => {
-        try {
-            const response = await fetch(`${API_BASE_URL}/api/alumnos/eliminar-definitivo/${id}`, { // Ajusta la ruta de tu API
-                method: 'DELETE',
-            });
+    try {
+        const response = await fetch(`${API_BASE_URL}/api/alumnos/eliminar-definitivo/${id}`, { // Ajusta la ruta de tu API
+            method: 'DELETE',
+        });
 
-            if (response.ok) {
-                cargarAlumnos();
-                alert('¡Alumno eliminado DEFINITIVAMENTE!');
-            } else if (response.status === 404) {
-                const data = await response.json();
-                alert(data.mensaje);
-            } else {
-                console.error('Error al eliminar definitivamente el alumno:', response.status);
-                alert('Error al eliminar definitivamente el alumno.');
-            }
-        } catch (error) {
-            console.error('Error de red al eliminar definitivamente el alumno:', error);
-            alert('Error de red al intentar eliminar definitivamente el alumno.');
+        if (response.ok) {
+            mostrarMensajeEliminacionDefinitiva('¡Alumno eliminado DEFINITIVAMENTE!');
+            cargarAlumnos();
+        } else if (response.status === 404) {
+            const data = await response.json();
+            mostrarMensajeEliminacionDefinitiva(data.mensaje);
+        } else {
+            console.error('Error al eliminar definitivamente el alumno:', response.status);
+            mostrarMensajeEliminacionDefinitiva('Error al eliminar definitivamente el alumno.');
         }
-    };
+    } catch (error) {
+        console.error('Error de red al eliminar definitivamente el alumno:', error);
+        mostrarMensajeEliminacionDefinitiva('Error de red al intentar eliminar definitivamente el alumno.');
+    }
+};
+
+// NUEVA FUNCIÓN PARA MOSTRAR EL MENSAJE DE ELIMINACIÓN DEFINITIVA
+function mostrarMensajeEliminacionDefinitiva(mensaje) {
+    const body = document.body;
+    const fondoOscuro = document.createElement('div');
+    fondoOscuro.className = 'fondo-oscuro-activar'; // Reutilizamos la clase de estilo
+
+    const ventanaEmergente = document.createElement('div');
+    ventanaEmergente.className = 'ventana-emergente-activar'; // Reutilizamos la clase de estilo
+    ventanaEmergente.innerHTML = `<p>${mensaje}</p>`;
+
+    body.appendChild(fondoOscuro);
+    body.appendChild(ventanaEmergente);
+
+    // Desaparecer después de 4 segundos (como el mensaje de activación)
+    setTimeout(() => {
+        ventanaEmergente.remove();
+        fondoOscuro.remove();
+    }, 4000);
+}
 
     // CARGAR SELECT
     try {

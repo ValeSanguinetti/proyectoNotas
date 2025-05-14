@@ -304,7 +304,7 @@ body {
 /* Estilos para el contenedor de mensajes */
 .contenedor-mensajes {
     margin-top: 10px; /* Espacio sobre el contenedor */
-    text-align: center; /* Centrar los mensajes dentro del contenedor */
+    text-align: center; 
 }
 
 .menu-toggle {

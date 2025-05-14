@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Escritos</title>
+    <link rel="stylesheet" href="../css/Listado_escritos_alumnos.css"> <!-- Reutiliza tu CSS actual -->
+</head>
+<body class="listado-alumnos-body">
+    <header class="listado-alumnos-header1">
+        Listado de Escritos
+    </header>
+
+    <nav class="listado-alumnos-main-navigation">
+        <button class="menu-toggle" id="menu-toggle">&#9776;</button> 
+        <ul class="listado-alumnos-nav-list" id="nav-list">
+            <li class="listado-alumnos-nav-item close-menu-item">
+                <button id="close-menu" class="close-menu-button">✖</button>
+            </li>
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Ventana_Inicio_Comun.html">Inicio</a></li>
+            <li class="listado-alumnos-nav-item"><a class="listado-alumnos-nav-link button_slide slide_left" href="/Pantallas/Login.html">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="listado-alumnos-section-header">
+        </div>
+
+        <table class="tabla-escritos">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Fecha</th>
+                    <th>Nota</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-escritos-body">
+                <!-- Filas serán cargadas desde JS -->
+            </tbody>
+        </table>
+    </main>
+
+    <footer class="listado-alumnos-footer">
+        ( Pie de Página )
+    </footer>
+
+    <script type="module" src="../js/ListadoEscritosPorAlumno.js"></script>
+</body>
+</html>

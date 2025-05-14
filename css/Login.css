@@ -32,41 +32,56 @@ header {
 }
 
 .image-container {
-    width: 150px; 
-    height: 150px; 
-    border-radius: 50px; 
+    width: 150px;
+    height: 150px;
+    border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px; 
-    position: relative; 
+    margin-bottom: 20px;
+    position: relative;
 }
 
 .image-container img {
-    max-width: 400px; 
-    max-height: 70%; 
-    object-fit: cover; 
+    max-width: 400px;
+    max-height: 70%;
+    object-fit: cover;
 }
 
 .image-container::before {
     content: '';
     position: absolute;
-    bottom: -20px; 
+    bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
     width: 0;
     height: 0;
-    border-left: 15px solid transparent; 
-    border-right: 15px solid transparent; 
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+}
+
+.password-input-container {
+    position: relative; /* Importante para posicionar el icono */
+    display: flex; /* Para alinear el input y el icono */
+    align-items: center; /* Centrar verticalmente */
 }
 
 input[type="text"],
 input[type="password"] {
-    width: 100%;
+    width: calc(100% - 30px); /* Ajustar el ancho para el icono */
     padding: 10px;
     margin: 8px 0 20px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 15px; 
+    top: 40%;   
+    transform: translateY(-50%); 
+    cursor: pointer;
+    color: #777;
 }
 
 button {
@@ -81,6 +96,31 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+
+#mensaje {
+    text-align: center; 
+    margin-top: 15px; 
+    padding: 10px; 
+    border-radius: 5px; 
+    color: black; 
+    min-height: 20px; 
+    line-height: center; /
+}
+
+.mensaje.error {
+    background-color: #f5bbc0; 
+    border: 1px solid #000000; 
+}
+
+.mensaje.correcto {
+    background-color: #bff7cc;
+    border: 1px solid #060706; 
+}
+
+.mensaje.alerta {
+    background-color: #f4e3ad; 
+    border: 1px solid #000000; 
 }
 
 @media (min-width: 768px) {

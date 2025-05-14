@@ -1,5 +1,5 @@
 import API_BASE_URL from './config.js';
-
+ // Menú hamburguesa
 document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.getElementById("menu-toggle");
     const navList = document.getElementById("nav-list");
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener('DOMContentLoaded', async function () {
-        // Menú hamburguesa
+       
        
         // Contador de caracteres
         const textarea = document.getElementById('conceptos');

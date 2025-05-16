@@ -1,11 +1,11 @@
 const mysql = require('mysql2');
 
 const conexion = mysql.createConnection({
-    host: 'centerbeam.proxy.rlwy.net',
-    user: 'root',
-    password: 'MHwUEMfJLPsfROiNPlktVbiLfegxdcir',
-    database: 'railway',
-    port: 55896
+    host: '161.0.125.70',
+    user: 'englishc_db_user',
+    password: 'R*SKr_4Yxj(j',
+    database: 'englishc_BD_Selva',
+    port: 3306
 });
 
 conexion.connect((err) => {

@@ -88,8 +88,9 @@ const crearcarne= async (req, res) => {
         const pdfBytes = await pdfDoc.save();
         
 
-      const outputPath = path.join(__dirname, '..', 'public', 'pdfs', 'carne_final.pdf');
-      
+     // const outputPath = path.join(__dirname, '..', 'public', 'pdfs', 'carne_final.pdf');
+      const outputPath = '/home/englishc/public_html/pdfs/carne_final.pdf';
+
 fs.writeFileSync(outputPath, pdfBytes);
 console.log('PDF guardado en:', outputPath);
 

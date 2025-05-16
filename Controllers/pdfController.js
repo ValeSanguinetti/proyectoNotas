@@ -89,7 +89,16 @@ const crearcarne= async (req, res) => {
         
 
       const outputPath = path.join(__dirname, '..', 'public', 'pdfs', 'carne_final.pdf');
-      fs.writeFileSync(outputPath, pdfBytes);
+      
+fs.writeFileSync(outputPath, pdfBytes);
+console.log('PDF guardado en:', outputPath);
+
+// Verifica si el archivo existe
+if (fs.existsSync(outputPath)) {
+  console.log('✔️ Archivo PDF existe en el servidor');
+} else {
+  console.error('❌ No se pudo guardar el archivo PDF');
+}
 
     //  const url = `${API_BASE_URL}/public/pdfs/carne_final.pdf`; // Cambia si usas otro dominio o puerto
       const timestamp = Date.now();

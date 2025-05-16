@@ -99,8 +99,8 @@ document.addEventListener('DOMContentLoaded', async function () {
             document.getElementById('ci').value = formatCI(alumno.ci) || '';
             document.getElementById('nombreCompleto').value = alumno.nombreCompleto || '';
             document.getElementById('cel').value = formatCel(alumno.cel) || '';
-            
-            document.getElementById('grupo').value = formatCel(alumno.grupo) || '';
+            document.getElementById('grupo').value = alumno.grupo || '';
+
         } else {
             mostrarMensaje('error', 'No se pudieron cargar los datos del alumno.');
         }

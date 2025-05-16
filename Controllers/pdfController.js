@@ -1,7 +1,7 @@
 const conexion = require('../db/conexion');
 const Escrito = require('../Models/Escritos');
 
-const API_BASE_URL = 'https://proyectonotas-production-253c.up.railway.app';
+const API_BASE_URL = 'https://englishclassesselva.uy/';
 const fs = require('fs');
 const path = require('path');
 const { PDFDocument } = require('pdf-lib');

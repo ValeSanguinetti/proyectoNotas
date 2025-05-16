@@ -91,7 +91,9 @@ const crearcarne= async (req, res) => {
       const outputPath = path.join(__dirname, '..', 'public', 'pdfs', 'carne_final.pdf');
       fs.writeFileSync(outputPath, pdfBytes);
 
-      const url = `${API_BASE_URL}/public/pdfs/carne_final.pdf`; // Cambia si usas otro dominio o puerto
+    //  const url = `${API_BASE_URL}/public/pdfs/carne_final.pdf`; // Cambia si usas otro dominio o puerto
+      const timestamp = Date.now();
+const url = `${API_BASE_URL}/public/pdfs/carne_final.pdf?ts=${timestamp}`;
 
       res.json({ mensaje: 'PDF generado con éxito.', urlPdf: url });
       });

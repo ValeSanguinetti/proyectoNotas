@@ -72,8 +72,14 @@ const crearcarne= async (req, res) => {
           datosPdf[`escritos_${trimestre}`] = nota.escritos;
           datosPdf[`conceptos_${trimestre}`] = nota.conceptos;
         });
-  
-        const existingPdfBytes = fs.readFileSync('carne.pdf');
+     const carnePdfPath = '/home/englishc/public_html/carne.pdf';
+
+      if (!fs.existsSync(carnePdfPath)) {
+        console.error('❌ El archivo base carne.pdf no existe en:', carnePdfPath);
+        return res.status(500).json({ mensaje: 'Archivo base carne.pdf no encontrado.' });
+      }
+
+      const existingPdfBytes = fs.readFileSync(carnePdfPath);
         const pdfDoc = await PDFDocument.load(existingPdfBytes);
         const form = pdfDoc.getForm();
   
@@ -102,8 +108,8 @@ if (fs.existsSync(outputPath)) {
 }
 
     //  const url = `${API_BASE_URL}/public/pdfs/carne_final.pdf`; // Cambia si usas otro dominio o puerto
-      const timestamp = Date.now();
-const url = `${API_BASE_URL}/public/pdfs/carne_final.pdf?ts=${timestamp}`;
+      
+const url = `${API_BASE_URL}/public/pdfs/carne_final.pdf`;
 
       res.json({ mensaje: 'PDF generado con éxito.', urlPdf: url });
       });

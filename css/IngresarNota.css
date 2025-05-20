@@ -207,15 +207,254 @@ body {
     border-color: #e57373 !important;
     box-shadow: 0 0 5px rgba(255, 77, 77, 0.5) !important;
 }
-
-.conceptos-form-group {
+/* -------- COMPRENSIÓN LECTORA -------- */
+.comprension-lectura-form-group {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 20px;
 }
 
-.conceptos-form-group label {
+.comprension-lectura-form-group label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.comprension-lectura-form-group textarea#comprension_lectura {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    resize: none;
+    width: 100%;
+}
+
+.comprension-lectura-form-group textarea#comprension_lectura:focus {
+    border-color: #e57373;
+    box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
+    outline: none;
+}
+
+.comprension-lectura-form-group #contadorComprensionLectura {
+    text-align: right;
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 5px;
+    align-self: flex-end;
+}
+
+/* -------- PRODUCCIÓN DE TEXTO -------- */
+.produccion-texto-form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.produccion-texto-form-group label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.produccion-texto-form-group textarea#produccion_texto {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    resize: none;
+    width: 100%;
+}
+
+.produccion-texto-form-group textarea#produccion_texto:focus {
+    border-color: #e57373;
+    box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
+    outline: none;
+}
+
+.produccion-texto-form-group #contadorProduccionTexto {
+    text-align: right;
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 5px;
+    align-self: flex-end;
+}
+
+/* -------- PRODUCCIÓN ORAL -------- */
+.produccion-oral-form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.produccion-oral-form-group label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.produccion-oral-form-group textarea#produccion_oral {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    resize: none;
+    width: 100%;
+}
+
+.produccion-oral-form-group textarea#produccion_oral:focus {
+    border-color: #e57373;
+    box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
+    outline: none;
+}
+
+.produccion-oral-form-group #contadorProduccionOral {
+    text-align: right;
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 5px;
+    align-self: flex-end;
+}
+
+/* -------- COMPRENSIÓN AUDITIVA -------- */
+.comprension-auditiva-form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.comprension-auditiva-form-group label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.comprension-auditiva-form-group textarea#comprension_auditiva {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    resize: none;
+    width: 100%;
+}
+
+.comprension-auditiva-form-group textarea#comprension_auditiva:focus {
+    border-color: #e57373;
+    box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
+    outline: none;
+}
+
+.comprension-auditiva-form-group #contadorComprensionAuditiva {
+    text-align: right;
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 5px;
+    align-self: flex-end;
+}
+
+/* -------- TAREAS DOMICILIARIAS -------- */
+.tareas-form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.tareas-form-group label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.tareas-form-group textarea#tareas {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    resize: none;
+    width: 100%;
+}
+
+.tareas-form-group textarea#tareas:focus {
+    border-color: #e57373;
+    box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
+    outline: none;
+}
+
+.tareas-form-group #contadorTareas {
+    text-align: right;
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 5px;
+    align-self: flex-end;
+}
+
+/* -------- ESCRITOS -------- */
+.escritos-form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.escritos-form-group label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.escritos-form-group textarea#escritos {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    resize: none;
+    width: 100%;
+}
+
+.escritos-form-group textarea#escritos:focus {
+    border-color: #e57373;
+    box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
+    outline: none;
+}
+
+.escritos-form-group #contadorEscritos {
+    text-align: right;
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 5px;
+    align-self: flex-end;
+}
+
+.registrar-alumno-form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.registrar-alumno-form-group label {
     flex-basis: auto;
     margin-right: 0;
     text-align: left;
@@ -224,7 +463,7 @@ body {
     margin-bottom: 5px;
 }
 
-.conceptos-form-group textarea#conceptos {
+.registrar-alumno-form-group textarea#conceptos {
     flex-grow: 1;
     padding: 10px;
     border: 1px solid #ccc;
@@ -237,13 +476,13 @@ body {
     width: 100%;
 }
 
-.conceptos-form-group textarea#conceptos:focus {
+.registrar-alumno-form-group textarea#conceptos:focus {
     border-color: #e57373;
     box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
     outline: none;
 }
 
-.conceptos-form-group #contadorConceptos {
+.registrar-alumno-form-group #contadorConceptos {
     text-align: right;
     font-size: 0.8em;
     color: #777;

@@ -13,21 +13,27 @@ document.addEventListener("DOMContentLoaded", () => {
         navList.style.display = "none";
     });
 });
-
+function agregarContador(idTextarea, idContador, maxChars) {
+    const textarea = document.getElementById(idTextarea);
+    const contador = document.getElementById(idContador);
+    if (textarea && contador) {
+        textarea.addEventListener('input', function () {
+            const restante = maxChars - textarea.value.length;
+            contador.textContent = `${restante}`;
+        });
+    }
+}
 document.addEventListener('DOMContentLoaded', async function () {
        
        
         // Contador de caracteres
-        const textarea = document.getElementById('conceptos');
-        const contador = document.getElementById('contadorConceptos');
-        const maxChars = 140;
-        if (textarea && contador) {
-            textarea.addEventListener('input', function () {
-                const restante = maxChars - textarea.value.length;
-                contador.textContent = `${restante}`;
-            });
-        }
-    
+      agregarContador('comprension_lectura', 'contadorComprensionLectura', 100);
+agregarContador('produccion_texto', 'contadorProduccionTexto', 75);
+agregarContador('produccion_oral', 'contadorProduccionOral', 110);
+agregarContador('comprension_auditiva', 'contadorComprensionAuditiva', 110);
+agregarContador('tareas', 'contadorTareas', 67);
+agregarContador('escritos', 'contadorEscritos', 80);
+agregarContador('conceptos', 'contadorConceptos', 140);
     const alumnoSelect = document.getElementById('alumnoId');
 
     try {

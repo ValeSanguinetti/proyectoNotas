@@ -19,12 +19,12 @@ class NotaCarne {
     this.grado = String(grado);
     this.mes = String(mes);
     this.anio = Number(anio);
-    this.comprension_lectura = Number(comprension_lectura);
-    this.produccion_texto = Number(produccion_texto);
-    this.produccion_oral = Number(produccion_oral);
-    this.comprension_auditiva = Number(comprension_auditiva);
-    this.tareas = Number(tareas);
-    this.escritos = Number(escritos);
+    this.comprension_lectura = String(comprension_lectura);
+    this.produccion_texto = String(produccion_texto);
+    this.produccion_oral = String(produccion_oral);
+    this.comprension_auditiva = String(comprension_auditiva);
+    this.tareas = String(tareas);
+    this.escritos = String(escritos);
     this.conceptos = String(conceptos);
     this.publicado= Boolean(publicado);
   }

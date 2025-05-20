@@ -102,13 +102,13 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.registrar-alumno-form-group {
+.registrar-select {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.registrar-alumno-form-group label {
+.registrar-select label {
     flex-basis: 150px;
     margin-right: 10px;
     text-align: left;
@@ -116,8 +116,8 @@ body {
     color: #555;
 }
 
-.registrar-alumno-form-group input[type="text"],
-.registrar-alumno-form-group select,
+.registrar-select input[type="text"],
+.registrar-select select,
 .registrar-alumno-form-group textarea {
     flex-grow: 1;
     padding: 10px;

@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', async function () {
        
         // Contador de caracteres
       agregarContador('comprension_lectura', 'contadorComprensionLectura', 100);
-agregarContador('produccion_texto', 'contadorProduccionTexto', 75);
+agregarContador('produccion_texto', 'contadorProduccionTexto', 180);
 agregarContador('produccion_oral', 'contadorProduccionOral', 110);
 agregarContador('comprension_auditiva', 'contadorComprensionAuditiva', 110);
 agregarContador('tareas', 'contadorTareas', 67);
